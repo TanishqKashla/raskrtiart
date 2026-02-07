@@ -10,9 +10,9 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        setShow(false); // scroll down → hide
+        setShow(false);
       } else {
-        setShow(true); // scroll up → show
+        setShow(true);
       }
       setLastScrollY(window.scrollY);
     };
@@ -23,14 +23,12 @@ export default function Navbar() {
 
   return (
     <>
-     
-      {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 ${
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="max-w-7xl mx-auto pl-39 pr-39">
+        <div className="max-w-7xl mx-auto px-4 md:pl-39 md:pr-39">
           <div className="flex items-center justify-between h-17.5">
             
             {/* Logo */}
@@ -42,16 +40,16 @@ export default function Navbar() {
                 height={35}
               />
               <span
-                className="text-white text-lg"
+                className="text-white text-lg cursor-pointer"
                 style={{ fontFamily: "Mauline" }}
               >
                 Raskrti Art
               </span>
             </div>
 
-            {/* Nav Links */}
+            {/* Nav Links – Desktop only */}
             <ul
-              className="flex gap-8 text-white text-sm"
+              className="hidden md:flex gap-8 text-white text-sm"
               style={{ fontFamily: "Futura PT" }}
             >
               <li className="hover:underline underline-offset-4 cursor-pointer">
