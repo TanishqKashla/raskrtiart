@@ -1,0 +1,96 @@
+"use client";
+
+import Image from "next/image";
+
+const images = [
+  "/gallery/1.jpg",
+  "/gallery/2.jpg",
+  "/gallery/3.jpg",
+  "/gallery/4.jpg",
+  "/gallery/5.jpg",
+];
+
+export default function ArtGallery() {
+  return (
+    <section className="bg-[#FBF4EC] py-14 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-16">
+        {/* Heading */}
+        <h2
+          className="text-4xl text-[#9C3D14] mb-10"
+          style={{ fontFamily: "Mauline" }}
+        >
+          Raskrti Art Gallery
+        </h2>
+      </div>
+
+      {/* ROW 1 – Right to Left */}
+      <div className="h-[300px] overflow-hidden mb-6">
+        <div className="flex gap-6 animate-marquee-left w-max">
+          {images.concat(images).map((src, index) => (
+            <div
+              key={`row1-${index}`}
+              className="h-[300px] w-[220px] rounded-xl overflow-hidden"
+            >
+              <Image
+                src={src}
+                alt="Gallery artwork"
+                width={220}
+                height={300}
+                className="object-cover h-full w-full"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ROW 2 – Left to Right */}
+      <div className="h-[300px] overflow-hidden">
+        <div className="flex gap-6 animate-marquee-right w-max">
+          {images.concat(images).map((src, index) => (
+            <div
+              key={`row2-${index}`}
+              className="h-[300px] w-[220px] rounded-xl overflow-hidden"
+            >
+              <Image
+                src={src}
+                alt="Gallery artwork"
+                width={220}
+                height={300}
+                className="object-cover h-full w-full"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Animations */}
+      <style jsx global>{`
+        @keyframes marquee-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes marquee-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        .animate-marquee-left {
+          animation: marquee-left 28s linear infinite;
+        }
+
+        .animate-marquee-right {
+          animation: marquee-right 28s linear infinite;
+        }
+      `}</style>
+    </section>
+  );
+}

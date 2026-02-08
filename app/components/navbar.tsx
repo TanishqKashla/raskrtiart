@@ -40,7 +40,7 @@ export default function Navbar() {
                 height={35}
               />
               <span
-                className="text-white text-lg cursor-pointer"
+                className="text-white text-2xl cursor-pointer"
                 style={{ fontFamily: "Mauline" }}
               >
                 Raskrti Art
@@ -49,7 +49,7 @@ export default function Navbar() {
 
             {/* Nav Links – Desktop only */}
             <ul
-              className="hidden md:flex gap-8 text-white text-sm"
+              className="hidden md:flex gap-8 text-white text-lg"
               style={{ fontFamily: "Futura PT" }}
             >
               <li className="hover:underline underline-offset-4 cursor-pointer">
