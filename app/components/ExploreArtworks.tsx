@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ExploreArtworks() {
   return (
-    <section className="bg-[#FBF4EC] py-20">
+    <section className="bg-[#FBF4EC] py-10">
       <div className="max-w-7xl mx-auto pl-0 pr-16">
         {/* Parent Wrapper */}
         <div className="flex gap-20 items-center">

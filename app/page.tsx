@@ -8,6 +8,8 @@ import TrendingCard from './components/TrendingCard'
 import ArtGallery from './components/ArtGallery'
 import EventCarousel from './components/events'
 import ShwetaSection from './components/shweta'
+import ContactUs from './components/contactUs'
+import Footer from './components/footer'
 
 const page = () => {
 
@@ -102,7 +104,7 @@ const page = () => {
       <AboutSection />
 
       {/* Courses Section */}
-      <section className="bg-[#FBF4EC] py-20">
+      <section className="bg-[#FBF4EC] py-10">
         <div className="max-w-7xl mx-auto px-16">
 
           {/* Heading + Button */}
@@ -166,6 +168,8 @@ const page = () => {
     <ArtGallery/>
     <EventCarousel/>
     <ShwetaSection/>
+    <ContactUs/>
+    <Footer/>
     </div>
   )
 }
