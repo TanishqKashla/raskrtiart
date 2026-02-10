@@ -28,7 +28,7 @@ export default function Navbar() {
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:pl-39 md:pr-39">
+        <div className="max-w-8xl mx-auto px-4 md:pl-39 md:pr-39">
           <div className="flex items-center justify-between h-17.5">
             
             {/* Logo */}

@@ -32,16 +32,15 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-full flex justify-center bg-[#FBF4EC] pt-24 pb-1 pl-16 pr-16">
-      <div className="relative w-[1295px] h-[485px] overflow-hidden rounded-md">
+    <div className="w-full relative flex justify-center bg-[#FBF4EC] pt-24 pb-1 px-4 md:px-16">
+      <div className="relative w-full md:w-[1295px] h-[550px] md:h-[485px] overflow-hidden rounded-md">
 
         {/* Slides */}
         {images.map((img, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-700 ${index === current ? "opacity-100" : "opacity-0"
+              }`}
           >
             <div className="relative h-full w-full p-4">
               <Image
@@ -58,7 +57,7 @@ export default function Carousel() {
         {/* Left Arrow */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow"
+          className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-7 h-7 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center shadow"
         >
           ❮
         </button>
@@ -66,25 +65,23 @@ export default function Carousel() {
         {/* Right Arrow */}
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow"
+          className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-7 h-7 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center shadow"
         >
           ❯
         </button>
-
-        
-// Dots
       </div>
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-          {images.map((_, index) => (
-            <span
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-2.5 h-2.5 rounded-full cursor-pointer ${
-                index === current ? "bg-primary" : "bg-gray-300"
+
+      {/*x Dots */}
+      <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-2.5 h-2.5 rounded-full cursor-pointer ${index === current ? "bg-primary" : "bg-gray-300"
               }`}
-            />
-          ))}
-        </div>
+          />
+        ))}
+      </div>
     </div>
   );
 }

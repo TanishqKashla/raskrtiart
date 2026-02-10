@@ -65,7 +65,7 @@ const page = () => {
   ];
 
 
-   const trendingArtworks = [
+  const trendingArtworks = [
     {
       image: "/carousel/1.jpg",
       title: "Name of Painting Goes Here",
@@ -99,16 +99,15 @@ const page = () => {
 
   return (
     <div>
-      <Navbar />
       <Carousel />
       <AboutSection />
 
       {/* Courses Section */}
-      <section className="bg-[#FBF4EC] py-10">
-        <div className="max-w-7xl mx-auto px-16">
+      <section className="bg-[#FBF4EC] md:py-10">
+        <div className="max-w-7xl mx-auto px-5 md:px-16">
 
           {/* Heading + Button */}
-          <div className="flex items-center justify-between mb-12">
+          <div className="flex items-center justify-between mb-8 md:mb-12">
             <h2
               className="text-4xl text-[#9C3D14]"
               style={{ fontFamily: "Mauline" }}
@@ -116,12 +115,12 @@ const page = () => {
               Courses We Offer
             </h2>
 
-            <button
+            {/* <button
               className="bg-[#9C3D14] text-white px-6 py-2 text-lg cursor-pointer"
               style={{ fontFamily: "Futura PT" }}
             >
               See All
-            </button>
+            </button> */}
           </div>
 
           {/* Cards Grid */}
@@ -137,39 +136,39 @@ const page = () => {
 
       {/* //trending and new section  */}
 
-      <section className="bg-[#FBF4EC] py-10">
-      <div className="max-w-7xl mx-auto px-16">
-        {/* Heading */}
-        <div className="flex items-center justify-between mb-12">
-          <h2
-            className="text-4xl text-[#9C3D14]"
-            style={{ fontFamily: "Mauline" }}
-          >
-            Trending and New
-          </h2>
+      <section className="bg-[#FBF4EC] py-10 pt-5 md:pt-16">
+        <div className="md:max-w-7xl md:mx-auto px-4 md:px-16">
+          {/* Heading */}
+          <div className="flex items-center justify-between mb-12">
+            <h2
+              className="text-4xl text-primary"
+              style={{ fontFamily: "Mauline" }}
+            >
+              Trending and New
+            </h2>
 
-          <button
+            {/* <button
             className="border border-[#9C3D14] text-[#9C3D14] px-4 py-2 text-lg cursor-pointer"
             style={{ fontFamily: "Futura PT" }}
           >
             See All
-          </button>
-        </div>
+          </button> */}
+          </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-4 gap-10">
-          {trendingArtworks.map((art, index) => (
-            <TrendingCard key={index} {...art} />
-          ))}
+          {/* Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
+            {trendingArtworks.map((art, index) => (
+              <TrendingCard key={index} {...art} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <ArtGallery/>
-    <EventCarousel/>
-    <ShwetaSection/>
-    <ContactUs/>
-    <Footer/>
+      <ArtGallery />
+      <EventCarousel />
+      <ShwetaSection />
+      <ContactUs />
+      <Footer />
     </div>
   )
 }

@@ -13,7 +13,7 @@ const images = [
 export default function ArtGallery() {
   return (
     <section className="bg-[#FBF4EC] py-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-16">
+      <div className="md:max-w-7xl md:mx-auto px-4 md:px-16">
         {/* Heading */}
         <h2
           className="text-4xl text-[#9C3D14] mb-10"

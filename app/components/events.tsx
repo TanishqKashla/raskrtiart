@@ -41,7 +41,7 @@ export default function EventCarousel() {
 
   return (
     <section className="bg-[#FBF4EC] py-10">
-      <div className="max-w-7xl mx-auto px-16">
+      <div className="md:max-w-7xl md:mx-auto px-4 md:px-16">
 
         {/* Heading */}
         <h2
@@ -52,7 +52,7 @@ export default function EventCarousel() {
         </h2>
 
         {/* Carousel Wrapper */}
-        <div className="relative flex items-center">
+        <div className="relative flex items-center mx-8 md:mx-0">
 
           {/* Left Arrow */}
           <button

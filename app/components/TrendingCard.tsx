@@ -16,43 +16,39 @@ const TrendingCard = ({
   price,
 }: TrendingCardProps) => {
   return (
-    <div
-      className="bg-[#EFE6D8] flex flex-col"
-      style={{ width: "267.31px", height: "426.02px" }}
-    >
+    <div className="flex flex-col gap-3 mb-3 md:mb-0">
       {/* Image wrapper */}
-      <div className="flex items-center justify-center h-[321.7px] bg-[#CFC7B8]">
+      <div className="aspect-[4/5] w-full relative overflow-hidden">
         <Image
           src={image}
           alt={title}
-          width={267.31}
-          height={321.7}
-          className="shadow-lg"
+          fill
+          className="object-cover object-center transition-transform duration-300 ease-in-out hover:scale-105"
         />
       </div>
 
       {/* Content */}
-      <div className="flex flex-col justify-between flex-1 px-3 py-3 bg-[#FBF4EC]">
+      <div className="flex flex-col justify-between">
         <div>
           <h3
-            className="text-[18.65px] font-medium mb-1"
+            className="text-[18.65px] font-medium mb-1 leading-snug"
             style={{ fontFamily: "Futura PT" }}
           >
             {title}
           </h3>
 
           <div
-            className="flex justify-between text-[15.54px] font-book text-[#333]"
+            className="flex justify-between text-[16px] font-book text-[#333]"
             style={{ fontFamily: "Futura PT" }}
           >
-            <span>Artist - {artist}</span>
+            <span className="hidden md:inline-block">Artist - {artist}</span>
             <span>{size}</span>
           </div>
         </div>
 
         {/* Price */}
         <div
-          className="bg-[#9C3D14] text-white text-center py-2 mt-3 text-[15.54px] font-book cursor-pointer"
+          className="bg-[#9C3D14] text-white text-center py-2 mt-3 text-[16px] font-book cursor-pointer"
           style={{ fontFamily: "Microsoft Sans Serif" }}
         >
           ₹ {price.toLocaleString()} INR
