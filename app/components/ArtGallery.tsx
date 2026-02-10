@@ -9,6 +9,7 @@ const images = [
   "/gallery/4.jpg",
   "/gallery/5.jpg",
   "/gallery/6.jpg",
+  "/gallery/7.jpg",
 ];
 
 export default function ArtGallery() {
@@ -30,7 +31,7 @@ export default function ArtGallery() {
           {images.concat(images).map((src, index) => (
             <div
               key={`row1-${index}`}
-              className="h-[300px] w-[220px] rounded-xl overflow-hidden"
+              className="h-[300px] w-fit rounded-xl overflow-hidden"
             >
               <Image
                 src={src}
@@ -50,7 +51,7 @@ export default function ArtGallery() {
           {images.concat(images).map((src, index) => (
             <div
               key={`row2-${index}`}
-              className="h-[300px] w-[220px] rounded-xl overflow-hidden"
+              className="h-[300px] w-fit rounded-xl overflow-hidden"
             >
               <Image
                 src={src}

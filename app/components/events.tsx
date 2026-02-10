@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const events = [
@@ -28,15 +28,30 @@ const events = [
 
 export default function EventCarousel() {
   const [index, setIndex] = useState(0);
+  const [visibleItems, setVisibleItems] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleItems(window.innerWidth >= 768 ? 3 : 1);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const maxIndex = Math.max(0, events.length - visibleItems);
+
+  useEffect(() => {
+    if (index > maxIndex) setIndex(maxIndex);
+  }, [visibleItems, maxIndex, index]);
 
   const prev = () => {
-    setIndex((prev) => (prev === 0 ? events.length - 3 : prev - 1));
+    setIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
   };
 
   const next = () => {
-    setIndex((prev) =>
-      prev >= events.length - 3 ? 0 : prev + 1
-    );
+    setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   return (
@@ -67,20 +82,20 @@ export default function EventCarousel() {
             <div
               className="flex gap-8 transition-transform duration-500"
               style={{
-                transform: `translateX(-${index * (344 + 32)}px)`,
+                transform: `translateX(calc(-${index} * (100% + 32px) / ${visibleItems}))`,
               }}
             >
               {events.map((event, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-[344px]"
+                  className="flex-shrink-0 w-full md:w-[calc((100%-64px)/3)]"
                 >
                   <Image
                     src={event.image}
                     alt={event.title}
                     width={344}
                     height={372}
-                    className="object-cover"
+                    className="w-full h-auto object-cover"
                   />
 
                   <div className="bg-[#9C3D14] text-white text-center py-3 mt-[-4px]">

@@ -31,7 +31,7 @@ const page = () => {
       price: 1200,
     },
     {
-      image: "/courses/1.png",
+      image: "/carousel/3.jpg",
       title: "Pattachitra",
       description:
         "Course description idhar ayega and thoda sa lamba hoga",
