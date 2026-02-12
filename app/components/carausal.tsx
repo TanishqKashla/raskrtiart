@@ -1,15 +1,10 @@
 "use client";
+import { CarouselImages } from "../data/heroCarousel"
+import { LuChevronRight, LuChevronLeft} from "react-icons/lu";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const images = [
-  "/carousel/1.jpg",
-  "/carousel/2.jpg",
-  "/carousel/3.jpg",
-  "/carousel/4.jpg",
-  "/carousel/5.jpg",
-];
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
@@ -17,26 +12,26 @@ export default function Carousel() {
   // Auto slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
+      setCurrent((prev) => (prev + 1) % CarouselImages.length);
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? CarouselImages.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+    setCurrent((prev) => (prev + 1) % CarouselImages.length);
   };
 
   return (
-    <div className="w-full relative flex justify-center bg-[#FBF4EC] pt-24 pb-1 px-4 md:px-16">
-      <div className="relative w-full md:w-[1295px] h-[550px] md:h-[485px] overflow-hidden rounded-md">
+    <div className="w-full relative flex justify-center bg-[#FBF4EC]pb-1 mb-8">
+      <div className="relative w-full md:w-[1395px] h-[550px] md:h-[600px] overflow-hidden rounded-2xl">
 
         {/* Slides */}
-        {images.map((img, index) => (
+        {CarouselImages.map((img, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-700 ${index === current ? "opacity-100" : "opacity-0"
@@ -54,26 +49,28 @@ export default function Carousel() {
           </div>
         ))}
 
-        {/* Left Arrow */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-7 h-7 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center shadow"
-        >
-          ❮
-        </button>
+        <div className="flex gap-4 z-50 absolute bottom-5 right-10">
+          {/* Left Arrow */}
+          <button
+            onClick={prevSlide}
+            className=" w-7 h-7 md:w-10 md:h-10 rounded-full bg-white/40 backdrop-blur-lg hover:cursor-pointer hover:bg-[#ffffff] flex items-center justify-center shadow"
+          >
+            <LuChevronLeft className="text-xl" />
+          </button>
 
-        {/* Right Arrow */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-7 h-7 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center shadow"
-        >
-          ❯
-        </button>
+          {/* Right Arrow */}
+          <button
+            onClick={nextSlide}
+            className="w-7 h-7 md:w-10 md:h-10 rounded-full bg-white/40 backdrop-blur-lg hover:cursor-pointer hover:bg-[#ffffff] flex items-center justify-center shadow"
+          >
+            <LuChevronRight className="text-xl" />
+          </button>
+        </div>
       </div>
 
       {/*x Dots */}
       <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
-        {images.map((_, index) => (
+        {CarouselImages.map((_, index) => (
           <span
             key={index}
             onClick={() => setCurrent(index)}

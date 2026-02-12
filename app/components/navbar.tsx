@@ -24,12 +24,12 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-10 ${
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="max-w-8xl mx-auto px-4 md:pl-39 md:pr-39">
-          <div className="flex items-center justify-between h-17.5">
+          <div className="flex items-center justify-between">
             
             {/* Logo */}
             <div className="flex items-center gap-2">

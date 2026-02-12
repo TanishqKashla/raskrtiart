@@ -2,29 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { events } from "../data/eventsWorkshopsSection";
 
-const events = [
-  {
-    image: "/events/1.png",
-    title: "Best Out of Waste Workshop",
-    date: "18th Dec 2025",
-  },
-  {
-    image: "/events/1.png",
-    title: "Best Out of Waste Workshop",
-    date: "18th Dec 2025",
-  },
-  {
-    image: "/events/1.png",
-    title: "Best Out of Waste Workshop",
-    date: "18th Dec 2025",
-  },
-  {
-    image: "/events/1.png",
-    title: "Best Out of Waste Workshop",
-    date: "18th Dec 2025",
-  },
-];
 
 export default function EventCarousel() {
   const [index, setIndex] = useState(0);
@@ -55,14 +34,12 @@ export default function EventCarousel() {
   };
 
   return (
-    <section className="bg-[#FBF4EC] py-10">
-      <div className="md:max-w-7xl md:mx-auto px-4 md:px-16">
+    <section className=" py-10">
+      <div className="md:max-w-[1395px] md:mx-auto px-4 md:px-0">
 
         {/* Heading */}
         <h2
-          className="text-4xl text-[#9C3D14] mb-12"
-          style={{ fontFamily: "Mauline" }}
-        >
+          className="text-5xl text-primary mb-12 font-primary">
           Events and Workshops
         </h2>
 
@@ -88,7 +65,7 @@ export default function EventCarousel() {
               {events.map((event, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 w-full md:w-[calc((100%-64px)/3)]"
+                  className="flex-shrink-0 w-full md:w-[calc((100%-364px)/3)]"
                 >
                   <Image
                     src={event.image}
