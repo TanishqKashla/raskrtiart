@@ -18,10 +18,10 @@ export default function CourseCard({
   price,
 }: CourseCardProps) {
   return (
-    <div className="w-[344px] h-[425px] bg-[#FBF4EC] flex flex-col">
+    <div className="w-full h-fit bg-[#FBF4EC] flex flex-col">
 
       {/* Image */}
-      <div className="relative w-full h-[244px]">
+      <div className="relative w-full h-[244px] mb-3">
         <Image
           src={image}
           alt={title}
@@ -31,10 +31,10 @@ export default function CourseCard({
       </div>
 
       {/* Content */}
-      <div className="flex flex-col justify-between flex-1 ">
+      <div className="flex flex-col justify-between flex-1 gap-2">
         <div>
           <h3
-            className="text-[24px] text-[#323232] mb-0 mt-1 font-medium "
+            className="text-[24px] text-[#323232]  font-medium "
             style={{ fontFamily: "Futura PT" }}
           >
             {title}
@@ -59,7 +59,7 @@ export default function CourseCard({
               className="text-foreground text-lg font-regular"
               style={{ fontFamily: "Microsoft Sans Serif" }}
             >
-              ₹ {price} INR/Month
+              ₹ {price} /Month
             </span>
           </div>
 

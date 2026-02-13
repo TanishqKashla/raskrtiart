@@ -4,23 +4,23 @@ import Image from "next/image";
 
 export default function ExploreArtworks() {
   return (
-    <section className="bg-[#FBF4EC] py-10 pb-0">
+    <section className="bpy-10 pb-0">
       <div className="">
         {/* Parent Wrapper */}
         <div className="w-full flex flex-col md:flex-row items-center">
+          
           {/* LEFT DIV */}
           <div
-            className="relative flex items-center bg-cover bg-center pl-0 w-full md:w-1/2 h-fit md:h-[538px]"
+            className="relative flex items-center bg-cover bg-center w-full md:w-1/2 h-fit md:h-[538px] p-5 py-12 xl:pl-32 xl:pr-20"
             style={{
               backgroundImage: "url('/store/banner.png')",
             }}
           >
 
             {/* Content */}
-            <div className="relative z-10 text-white p-5 py-12 md:pl-32 md:pr-20">
+            <div className="relative z-10 text-white">
               <h2
-                className="text-4xl md:text-5xl font-regular mb-4 md:leading-16"
-                style={{ fontFamily: "Mauline" }}
+                className="text-4xl md:text-5xl font-regular mb-4 md:leading-16 font-primary"
               >
                 Explore Artworks <br />
                 Available for Sale

@@ -1,4 +1,4 @@
 export const aboutData = {
     title: "About Raskrti Art ifhar se ayega",
-    description: "Raskrti Art is a vibrant and dynamic art collective dedicated to fostering creativity and promoting artistic expression. We are a community of passionate artists, curators, and art enthusiasts who come together to celebrate the power of art in all its forms. Our mission is to provide a platform for emerging and established artists to showcase their work, connect with fellow creatives, and engage with a diverse audience. Through exhibitions, workshops, and collaborative projects, we aim to inspire and empower artists while enriching the cultural landscape of our community.",
+    description: "Raskrti Art School, a renowned institution dedicated to nurturing creativity and talent in individuals of all ages. Founded in 2014, our school provides a platform for art enthusiasts to explore, learn, and grow in various art forms, including folk art, painting, sculpture, 3D art, and crafts. We offer both hobby and diploma courses, designed to suit different needs and goals, with personalized attention and guidance from our experienced faculty.",
 };

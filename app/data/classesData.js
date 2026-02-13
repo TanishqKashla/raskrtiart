@@ -1,4 +1,4 @@
-export const courses = [
+export const classes = [
     {
         image: "/courses/1.png",
         title: "Madhubani Canvas Painting",

@@ -7,12 +7,12 @@ import ExploreArtworks from './components/ExploreArtworks'
 import TrendingCard from './components/TrendingCard'
 import ArtGallery from './components/ArtGallery'
 import EventCarousel from './components/events'
-import ShwetaSection from './components/shweta'
+import FounderSection from './components/FounderSection'
 import ContactUs from './components/contactUs'
 import Footer from './components/footer'
 import Button from './components/Button';
 import Testimonials from './components/Testimonials'
-import { courses } from './data/coursesData'
+import { classes } from './data/classesData'
 import { storeProducts } from './data/storeData'
 
 
@@ -24,28 +24,28 @@ const page = () => {
       <Carousel />
       <AboutSection />
 
-      <section className='relative bg-red-400 w-full h-[450px] flex flex-col items-center justify-center gap-8 mb-16'
+      <section className='relative bg-red-400 w-full h-[250px] md:h-[450px] flex flex-col items-center justify-center gap-8'
         style={{ backgroundImage: 'url("/banner.jpeg")', backgroundSize: "cover", backgroundPosition: "center" }}>
 
         {/* overlay */}
         <div className='bg-primary/80 absolute top-0 bottom-0 left-0 z-0 right-0'></div>
 
         <div className='relative z-10'>
-          <h1 className='text-6xl font-primary text-white mb-3'>Enroll Yourself Now!</h1>
+          <h1 className='text-4xl md:text-6xl font-primary text-white mb-3'>Enroll Yourself Now!</h1>
           <Button variant="outlineWhite" className="mt-4">Book Now</Button>
         </div>
       </section>
 
       {/* Courses Section */}
-      <section className="bg-[#FBF4EC] md:py-10">
-        <div className="max-w-[1395px] mx-auto px-5 md:px-0">
+      <section className="bg-[#FBF4EC] py-12 md:py-20">
+        <div className="max-w-[1395px] mx-auto px-5 md:px-8">
 
           {/* Heading + Button */}
-          <div className="flex items-center justify-between mb-8 md:mb-16">
+          <div className="flex items-center justify-between mb-10 md:mb-16">
             <h2
-              className="text-5xl text-primary font-primary"
+              className="text-4xl md:text-5xl text-primary font-primary"
             >
-              Courses We Offer
+              Classes We Offer
             </h2>
 
             {/* <button
@@ -57,9 +57,9 @@ const page = () => {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
-            {courses.map((course, index) => (
-              <CourseCard key={index} {...course} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-y-20 justify-items-center">
+            {classes.map((cls, index) => (
+              <CourseCard key={index} {...cls} />
             ))}
           </div>
 
@@ -69,14 +69,12 @@ const page = () => {
 
       {/* //trending and new section  */}
 
-      <section className="md:max-w-[1395px] md:mx-auto px-4 md:px-0 py-10 pt-5 md:pt-16">
+      <section className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="">
           {/* Heading */}
           <div className="flex items-center justify-between mb-12">
             <h2
-              className="text-5xl text-primary"
-              style={{ fontFamily: "Mauline" }}
-            >
+              className="text-4xl md:text-5xl text-primary font-primary">
               Trending and New
             </h2>
 
@@ -99,7 +97,7 @@ const page = () => {
 
       <EventCarousel />
       <Testimonials />
-      <ShwetaSection />
+      <FounderSection />
       <ArtGallery />
       <ContactUs />
       <Footer />

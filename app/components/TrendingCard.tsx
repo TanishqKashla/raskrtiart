@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LuShoppingCart } from "react-icons/lu";
 
 interface TrendingCardProps {
   image: string;
@@ -31,15 +32,15 @@ const TrendingCard = ({
       <div className="flex flex-col justify-between">
         <div>
           <h3
-            className="text-[18.65px] font-medium mb-1 leading-snug"
-            style={{ fontFamily: "Futura PT" }}
+            className="text-[18.65px] font-medium mb-1 leading-6 font-secondary"
+       
           >
             {title}
           </h3>
 
           <div
-            className="flex justify-between text-[16px] font-book text-[#333]"
-            style={{ fontFamily: "Futura PT" }}
+            className="flex justify-between text-[16px] font-book text-[#333] font-secondary"
+       
           >
             <span className="hidden md:inline-block">Artist - {artist}</span>
             <span>{size}</span>
@@ -48,10 +49,9 @@ const TrendingCard = ({
 
         {/* Price */}
         <div
-          className="bg-[#9C3D14] text-white text-center py-2 mt-3 text-[16px] font-book cursor-pointer"
-          style={{ fontFamily: "Microsoft Sans Serif" }}
+          className="bg-primary flex justify-center items-center gap-3 text-white text-center py-2 mt-3 text-[16px] font-book cursor-pointer font-light"
         >
-          ₹ {price.toLocaleString()} INR
+          <LuShoppingCart /> ₹ {price.toLocaleString()}
         </div>
       </div>
     </div>

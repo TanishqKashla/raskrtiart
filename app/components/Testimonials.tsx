@@ -22,7 +22,7 @@ const Testimonials = () => {
 
     return (
         <section className='max-w-[1395px] mx-auto py-28'>
-            <div className='flex justify-between mb-20 px-4 md:px-0'>
+            <div className='flex justify-between mb-20 px-4 md:px-8'>
                 <h1 className='text-3xl md:text-5xl font-primary text-primary'>WHAT PEOPLE SAY</h1>
 
                 {/* left right button */}
@@ -41,8 +41,8 @@ const Testimonials = () => {
             <div key={currentIndex} className='flex flex-col md:flex-row px-5 md:px-16 justify-between w-full animate-slide-in'>
 
                 {/* photo and name */}
-                <div className="shrink-0 mb-8 md:mb-0 flex flex-col items-center md:items-start bg-transparent">
-                    <div className='relative rounded-tr-full rounded-tl-full overflow-hidden h-80 aspect-[10/11] mb-3 shadow-lg'>
+                <div className="shrink-0 mb-8 md:mb-0 flex flex-col items-start bg-transparent">
+                    <div className='relative rounded-tr-full rounded-tl-full overflow-hidden h-50 md:h-80 aspect-[10/11] mb-3 shadow-lg'>
                         <Image
                             src={currentData.image}
                             alt={currentData.name}

@@ -27,8 +27,8 @@ export default function Carousel() {
   };
 
   return (
-    <div className="w-full relative flex justify-center bg-[#FBF4EC]pb-1 mb-8">
-      <div className="relative w-full md:w-[1395px] h-[550px] md:h-[600px] overflow-hidden rounded-2xl">
+    <div className="w-full relative flex justify-center bg-[#FBF4EC] px-4  pb-1 md:mb-8">
+      <div className="relative w-full md:max-w-[1395px] h-[400px] md:h-[600px] overflow-hidden rounded-lg md:rounded-2xl">
 
         {/* Slides */}
         {CarouselImages.map((img, index) => (
@@ -49,7 +49,7 @@ export default function Carousel() {
           </div>
         ))}
 
-        <div className="flex gap-4 z-50 absolute bottom-5 right-10">
+        <div className="flex gap-4 absolute bottom-5 right-10">
           {/* Left Arrow */}
           <button
             onClick={prevSlide}

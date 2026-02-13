@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-10 ${
+        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-5 md:py-10 ${
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >
