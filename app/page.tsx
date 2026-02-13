@@ -4,7 +4,7 @@ import Navbar from './components/navbar'
 import AboutSection from './components/about'
 import CourseCard from './components/CourseCard'
 import ExploreArtworks from './components/ExploreArtworks'
-import TrendingCard from './components/TrendingCard'
+import ProductCard from './components/ProductCard'
 import ArtGallery from './components/ArtGallery'
 import EventCarousel from './components/events'
 import FounderSection from './components/FounderSection'
@@ -88,8 +88,15 @@ const page = () => {
 
           {/* Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
-            {storeProducts.map((art, index) => (
-              <TrendingCard key={index} {...art} />
+            {storeProducts.map((product, index) => (
+              <ProductCard key={index} productDetails={{
+                title: product.title,
+                artist: product.artist,
+                size: product.dimensions,
+                price: product.price,
+                image: product.imageData.mainImage.src,
+                slug: product.slug
+              }} />
             ))}
           </div>
         </div>
