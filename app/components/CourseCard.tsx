@@ -18,7 +18,7 @@ export default function CourseCard({
   price,
 }: CourseCardProps) {
   return (
-    <div className="w-full h-fit bg-[#FBF4EC] flex flex-col">
+    <div className="max-w-7xl h-fit bg-[#FBF4EC] flex flex-col">
 
       {/* Image */}
       <div className="relative w-full h-[244px] mb-3">

@@ -38,7 +38,7 @@ const Testimonials = () => {
                 </div>
             </div>
 
-            <div key={currentIndex} className='flex flex-col md:flex-row px-5 md:px-16 justify-between w-full animate-slide-in'>
+            <div key={currentIndex} className='flex flex-col md:flex-row px-5 md:px-24 justify-between w-full animate-slide-in'>
 
                 {/* photo and name */}
                 <div className="shrink-0 mb-8 md:mb-0 flex flex-col items-start bg-transparent">

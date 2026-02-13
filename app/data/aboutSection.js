@@ -1,4 +1,4 @@
 export const aboutData = {
-    title: "About Raskrti Art ifhar se ayega",
-    description: "Raskrti Art School, a renowned institution dedicated to nurturing creativity and talent in individuals of all ages. Founded in 2014, our school provides a platform for art enthusiasts to explore, learn, and grow in various art forms, including folk art, painting, sculpture, 3D art, and crafts. We offer both hobby and diploma courses, designed to suit different needs and goals, with personalized attention and guidance from our experienced faculty.",
+    title: "Where Tradition Meets Creativity - Raskrti Art",
+    description: "Raskrti Art, founded in 2014, is a creative hub that nurtures artistic talent across all age groups. We offer diverse art forms including folk art, fine art, painting, sculpture, and 3D art through well-structured hobby and diploma courses. With expert guidance and a supportive environment, we help individuals explore creativity, express themselves, and grow as artists.",
 };
