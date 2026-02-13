@@ -24,11 +24,11 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-5 md:py-10 ${
+        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-5 md:pt-10 ${
           show ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="max-w-8xl mx-auto px-4 md:pl-39 md:pr-39">
+        <div className="max-w-[1395px] mx-auto px-4 md:px-20">
           <div className="flex items-center justify-between">
             
             {/* Logo */}
@@ -36,11 +36,11 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Raskrti Art"
-                width={35}
-                height={35}
+                width={45}
+                height={45}
               />
               <span
-                className="text-white text-2xl cursor-pointer"
+                className="text-white text-3xl cursor-pointer"
                 style={{ fontFamily: "Mauline" }}
               >
                 Raskrti Art

@@ -14,6 +14,7 @@ import Button from './components/Button';
 import Testimonials from './components/Testimonials'
 import { classes } from './data/classesData'
 import { storeProducts } from './data/storeData'
+import CoursesOffer from './components/courses'
 
 
 const page = () => {
@@ -35,6 +36,9 @@ const page = () => {
           <Button variant="outlineWhite" className="mt-4">Book Now</Button>
         </div>
       </section>
+
+      {/* Courses */}
+      <CoursesOffer />
 
       {/* Courses Section */}
       <section className="bg-[#FBF4EC] py-12 md:py-20">
