@@ -1,9 +1,9 @@
 import Button from '@/app/components/Button';
-import Image from 'next/image'
 import React from 'react'
 import { LuArrowRight } from 'react-icons/lu';
 import { storeProducts } from '@/app/data/storeData';
 import ProductCard from '@/app/components/ProductCard';
+import ProductGallery from '@/app/components/ProductGallery';
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
@@ -23,35 +23,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <div className='grid grid-cols-2 gap-10 md:gap-16 mt-5'>
 
         {/* Product Images */}
-        <div className='flex flex-col gap-5'>
-          <div className='aspect-[4/5] w-full relative overflow-hidden'>
-            <Image
-              src={product.imageData.mainImage.src}
-              alt={product.imageData.mainImage.alt}
-              fill
-              className='object-cover' />
-          </div>
-
-          {/* thumbnails */}
-          <div className='flex gap-3 justify-center'>
-            <div className='relative overflow-hidden h-20 aspect-square'>
-              <Image
-                src={product.imageData.mainImage.src}
-                alt={product.imageData.mainImage.alt}
-                fill
-                className='object-cover' />
-            </div>
-            {product.imageData.additionalImages.map((img, index) => (
-              <div key={index} className='relative overflow-hidden h-20 aspect-square'>
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className='object-cover' />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProductGallery mainImage={product.imageData.mainImage} additionalImages={product.imageData.additionalImages} />
 
 
 
@@ -69,7 +41,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <p className='font-light font-bold text-2xl my-6'>₹{product.price.toLocaleString()}</p>
             <p className='text-2xl'>{product.description}</p>
 
-            <div className='w-full flex gap-10 mt-10'>
+            <div className='w-full flex gap-10 mt-10 mb-10'>
               <div className='flex flex-col'>
                 <h4 className='text-xl font-medium'>Dimensions: </h4>
                 <p className='text-xl'>{product.dimensions}</p>
@@ -79,7 +51,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
                 <p className='text-xl'>{product.medium}</p>
               </div>
             </div>
-            <Button>Buy Now on Whatsapp <LuArrowRight /></Button>
+            <Button className='flex gap-3 items-center'>Buy Now on Whatsapp <LuArrowRight /></Button>
           </div>
 
           {/* Detailed List */}
