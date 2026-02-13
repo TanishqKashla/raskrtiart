@@ -21,18 +21,32 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const offset =0; // Adjust based on navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-5 md:pt-10 ${
-          show ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-5 md:pt-10 ${show ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="max-w-[1395px] mx-auto px-4 md:px-20">
           <div className="flex items-center justify-between">
-            
+
             {/* Logo */}
-            <div className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-2">
               <Image
                 src="/logo.png"
                 alt="Raskrti Art"
@@ -45,7 +59,7 @@ export default function Navbar() {
               >
                 Raskrti Art
               </span>
-            </div>
+            </a>
 
             {/* Nav Links – Desktop only */}
             <ul
@@ -56,10 +70,14 @@ export default function Navbar() {
                 Home
               </li>
               <li className="hover:underline underline-offset-4 cursor-pointer">
-                Courses
+                <a href="#courses" onClick={(e) => handleSmoothScroll(e, "courses")}>
+                  Courses
+                </a>
               </li>
               <li className="hover:underline underline-offset-4 cursor-pointer">
-                Gallery
+                <a href="#gallery" onClick={(e) => handleSmoothScroll(e, "gallery")}>
+                  Gallery
+                </a>
               </li>
               <li className="hover:underline underline-offset-4 cursor-pointer">
                 About Us

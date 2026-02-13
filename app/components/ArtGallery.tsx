@@ -14,12 +14,11 @@ const images = [
 
 export default function ArtGallery() {
   return (
-    <section className="bg-[#FBF4EC] py-10 overflow-hidden">
-      <div className="md:max-w-7xl md:mx-auto px-4 md:px-16">
+    <section id="gallery" className="bg-[#FBF4EC] py-10 overflow-hidden py-20">
+      <div className="md:max-w-[1395px] md:mx-auto px-4 md:px-16">
         {/* Heading */}
         <h2
-          className="text-4xl text-[#9C3D14] mb-10"
-          style={{ fontFamily: "Mauline" }}
+          className="text-3xl md:text-5xl text-[#9C3D14] mb-10 font-primary"
         >
           Raskrti Art Gallery
         </h2>

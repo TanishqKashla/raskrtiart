@@ -29,7 +29,7 @@ export const storeProducts = [
         {
           src: "/store/painting-name/3.jpg",
           alt: "Painting 1 Back View"
-        }
+        },
       ]
     },
     inStock: true,

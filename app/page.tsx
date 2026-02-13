@@ -111,7 +111,6 @@ const page = () => {
       <FounderSection />
       <ArtGallery />
       <ContactUs />
-      <Footer />
     </div>
   )
 }

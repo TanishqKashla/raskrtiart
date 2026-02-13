@@ -5,7 +5,7 @@ import { courses } from "../data/coursesData";
 
 export default function CoursesWeOffer() {
   return (
-    <section className="bg-[#FBF4EC]  pt-20">
+    <section id="courses" className="bg-[#FBF4EC]  pt-20">
       <div className="max-w-[1395px] mx-auto h-fit px-5 md:px-8 flex flex-col ">
         {/* Heading */}
         <h2 className="text-5xl text-primary mb-12 font-primary">

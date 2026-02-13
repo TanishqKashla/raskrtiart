@@ -21,7 +21,7 @@ const ProductCard = ({
   return (
     <a href={`/shop/${productDetails.slug}`}>
 
-      <div className="flex flex-col gap-3 mb-3 md:mb-0 cursor-pointer">
+      <div className="h-full flex flex-col gap-3 mb-3 md:mb-0 cursor-pointer">
         {/* Image wrapper */}
         <div className="aspect-[4/5] w-full relative overflow-hidden">
           <Image
@@ -33,7 +33,7 @@ const ProductCard = ({
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-between">
+        <div className="flex-1 flex flex-col justify-between">
           <div>
             <h3
               className="text-[18.65px] font-medium mb-1 leading-6 font-secondary"
@@ -41,7 +41,9 @@ const ProductCard = ({
             >
               {productDetails.title}
             </h3>
+          </div>
 
+          <div>
             <div
               className="flex justify-between text-[16px] font-book text-[#333] font-secondary"
 
@@ -49,13 +51,12 @@ const ProductCard = ({
               <span className="hidden md:inline-block">Artist - {productDetails.artist}</span>
               <span>{productDetails.size}</span>
             </div>
-          </div>
-
-          {/* Price */}
-          <div
-            className="bg-primary flex justify-center items-center gap-3 text-white text-center py-2 mt-3 text-[16px] font-book cursor-pointer font-light"
-          >
-            <LuShoppingCart /> ₹ {productDetails.price.toLocaleString()}
+            {/* Price */}
+            <div
+              className="bg-primary flex justify-center items-center gap-3 text-white text-center py-2 mt-3 text-[16px] font-book cursor-pointer font-light"
+            >
+              <LuShoppingCart /> ₹ {productDetails.price.toLocaleString()}
+            </div>
           </div>
         </div>
       </div>
