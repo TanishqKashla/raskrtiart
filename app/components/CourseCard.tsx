@@ -18,20 +18,14 @@ export default function CourseCard({
   price,
 }: CourseCardProps) {
   return (
-    <div className="max-w-7xl h-fit bg-[#FBF4EC] flex flex-col">
-
+    <div className="max-w-[1395px] h mx-auto bg-[#FBF4EC] flex flex-col ">
       {/* Image */}
       <div className="relative w-full h-[244px] mb-3">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+        <Image src={image} alt={title} fill className="object-cover" />
       </div>
 
       {/* Content */}
-      <div className="flex flex-col justify-between flex-1 gap-2">
+      <div className="flex flex-col justify-between flex-1 gap-2 ">
         <div>
           <h3
             className="text-[24px] text-[#323232]  font-medium "
@@ -40,8 +34,17 @@ export default function CourseCard({
             {title}
           </h3>
 
+          <div className="mb-2 flex mt-2 gap-1">
+            <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-2 py-0 rounded-full">
+              {mode}
+            </span>{" "}
+            <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-2 py-0 rounded-full">
+              Including Material Kit
+            </span>
+          </div>
+
           <p
-            className="text-[20px] text-[#323232] leading-snug font-book"
+            className="text-[18px] text-[#323232] leading-snug font-book line-clamp-2"
             style={{ fontFamily: "Futura PT" }}
           >
             {description}
@@ -50,16 +53,12 @@ export default function CourseCard({
 
         {/* Footer */}
         <div>
-          <div className="flex items-center justify-between mb-3">
-            <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-3 py-1 rounded-full">
-              {mode}
-            </span>
-
+          <div className="flex items-center justify-end mb-3 ">
             <span
-              className="text-foreground text-lg font-regular"
+              className="text-foreground text-lg font-regular "
               style={{ fontFamily: "Microsoft Sans Serif" }}
             >
-              ₹ {price} /Month
+              ₹ {price.toLocaleString()}
             </span>
           </div>
 

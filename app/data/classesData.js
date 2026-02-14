@@ -1,50 +1,52 @@
 export const classes = [
     {
-        image: "/courses/1.png",
-        title: "Madhubani Canvas Painting",
+        image: "/classes/tanjore-class.jpg",
+        title: "Tanjore Painting",
         description:
-            "Course description idhar ayega and thoda sa lamba hoga",
-        mode: "Offline",
-        price: 1500,
+            "Learn the rich South Indian Tanjore art style using gold foil and intricate detailing. This course guides you from basic techniques to professional-level finishing.",
+        mode: "Online & Offline",
+        price: 18000,
+        
     },
     {
-        image: "/courses/1.png",
-        title: "Warli Art",
+        image: "/classes/madhubani-class.jpeg",
+        title: "Madhubani Painting",
         description:
-            "Course description idhar ayega and thoda sa lamba hoga",
-        mode: "Offline",
-        price: 1200,
+            "Explore the traditional folk art of Bihar with vibrant patterns and storytelling designs. Perfect for beginners and students who love cultural art forms.",
+        mode: "Online & Offline",
+        price: 8000,
+        
     },
     {
-        image: "/carousel/3.jpg",
-        title: "Pattachitra",
+        image: "/classes/relief-class.jpeg",
+        title: "Relief Artwork (3D Mural)",
         description:
-            "Course description idhar ayega and thoda sa lamba hoga",
+            "Create stunning 3D textured artworks with depth and dimension. Ideal for home décor lovers and aspiring professional artists.",
         mode: "Offline",
-        price: 1800,
+        price: 30000,
     },
     {
-        image: "/courses/1.png",
-        title: "Miniature Painting",
+        image: "/classes/resin-class.jpeg",
+        title: "Resin Art (Basic)",
         description:
-            "Course description idhar ayega and thoda sa lamba hoga",
+            "Master the modern art of resin techniques and glossy finishing. Learn to create luxury-style decorative pieces with professional guidance.",
         mode: "Offline",
-        price: 2000,
+        price: 40000,
     },
     {
-        image: "/courses/1.png",
-        title: "Gond Art",
+        image: "/classes/fine-art-class.jpeg",
+        title: "Fine Art Diploma",
         description:
-            "Course description idhar ayega and thoda sa lamba hoga",
-        mode: "Offline",
-        price: 1400,
+            "A comprehensive program covering sketching, shading, coloring, and advanced techniques. Perfect for students who want strong artistic foundations.",
+        mode: "Online & Offline",
+        price: 2500,
     },
     {
-        image: "/courses/1.png",
-        title: "Kalamkari",
+        image: "/classes/portrait-class.jpg",
+        title: "Portrait Making (Oil/Acrylic/Watercolor)",
         description:
-            "Course description idhar ayega and thoda sa lamba hoga",
+            "Learn realistic portrait creation with detailed facial features and expressions. Suitable for learners who want to master lifelike painting techniques.",
         mode: "Offline",
-        price: 1600,
+        price: 10000,
     },
 ];

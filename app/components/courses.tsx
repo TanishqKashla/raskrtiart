@@ -38,7 +38,7 @@ export default function CoursesWeOffer() {
 
                   {/* Description */}
                   <p
-                    className="text-[20px] text-[#323232] leading-snug font-book"
+                    className="text-[18px] text-[#323232] leading-snug font-book"
                     style={{ fontFamily: "Futura PT" }}
                   >
                     {course.description}
@@ -48,7 +48,7 @@ export default function CoursesWeOffer() {
                 <div className="">
                   <div className="flex justify-end mb-2">
                     {/* Duration */}
-                    <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-3 py-1 rounded-full w-fit ">
+                    <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-2 py-0 my-2 rounded-full w-fit ">
                       {course.duration}
                     </span>
                   </div>

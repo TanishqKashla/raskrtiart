@@ -11,7 +11,7 @@ export default function ExploreArtworks() {
           
           {/* LEFT DIV */}
           <div
-            className="relative flex items-center bg-cover bg-center w-full md:w-1/2 h-fit md:h-[538px] p-5 py-12 xl:pl-32 xl:pr-20"
+            className="relative flex items-center bg-cover bg-center w-full md:w-1/2 h-fit md:h-[538px] p-5 py-12 xl:pl-24 xl:pr-20"
             style={{
               backgroundImage: "url('/store/banner.png')",
             }}
@@ -22,19 +22,16 @@ export default function ExploreArtworks() {
               <h2
                 className="text-4xl md:text-5xl font-regular mb-4 md:leading-16 font-primary"
               >
-                Explore Artworks <br />
-                Available for Sale
+                Take Home a Piece <br />
+                of Art You'll Love
+                
               </h2>
 
               <p
                 className="text-[18px] md:text-[20px] font-book leading-snug mb-0"
                 style={{ fontFamily: "Futura PT" }}
               >
-                Donec consequat ultrices neque, asce lersqu nulla varius at.
-                Praesent tolbero, luctus vestibul umnuncmonc consequat versqu
-                nulla varius at. Donec consequat ultrices neque, asce lersqu
-                nulla varius at. Praesent tolbero, luctus vestibul umnuncmonc
-                consequat versqu nulla varius at.
+                Explore the Raskrti Art Store, where creativity transforms into beautifully handcrafted masterpieces. From traditional Tanjore and Madhubani paintings to elegant relief artworks and unique resin creations, each piece reflects passion and precision. Our artworks are thoughtfully designed to add culture, color, and character to your space. Discover art that speaks to you and make it a part of your story.
               </p>
 
               <button
@@ -52,10 +49,10 @@ export default function ExploreArtworks() {
           >
             <div>
               <Image
-                src="/courses/1.png"
+                src="/gallery/15.jpeg"
                 alt="Artwork for Sale"
-                width={460}
-                height={538}
+                width={360}
+                height={438}
                 className="object-cover"
               />
             </ div>
