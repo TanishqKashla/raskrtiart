@@ -23,9 +23,16 @@ const page = () => {
 
   return (
     <div>
+
+      {/* ============Carousel Section============ */}
       <Carousel />
+
+
+    {/* ============About Section============ */}
       <AboutSection />
 
+      
+      {/* ============ENROLL NOW BANNER============ */}
       <section className='relative bg-red-400 w-full h-[250px] md:h-[450px] flex flex-col items-center justify-center gap-8'
         style={{ backgroundImage: 'url("/banner.jpeg")', backgroundSize: "cover", backgroundPosition: "center" }}>
 
@@ -38,6 +45,7 @@ const page = () => {
         </div>
       </section>
 
+      
       {/* ============Courses Section============ */}
       <CoursesOffer />
 
