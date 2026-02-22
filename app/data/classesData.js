@@ -263,4 +263,15 @@ export const classesData = [
         timings: "3.30-5.00 PM (Evening)",
         materials: "Material Included",
     },
+    {
+        id: 25,
+        thumbnail: "/gallery/3.jpeg",
+        className: "PICHWAI ART",
+        ageGroup: "12+",
+        fee: "2500",
+        totalClasses: 6,
+        days: "Tue-Thurs",
+        timings: "3.30-5.00 PM (Evening)",
+        materials: "Material Included",
+    },
 ];
