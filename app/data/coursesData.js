@@ -1,7 +1,7 @@
 const courses = [
   {
     id: 1,
-    thumbnail: "/gallery/3.jpeg",
+    thumbnail: "/courses/fabric.jpg",
     className: "FABRIC PAINTING",
     ageGroup: "15+",
     fee: "10000/-",
@@ -12,7 +12,7 @@ const courses = [
   },
   {
     id: 2,
-    thumbnail: "/gallery/3.jpeg",
+    thumbnail: "/courses/tanjour.jpeg",
     className: "TANJOUR PAINTING",
     classType: "Scratch to Advance",
     ageGroup: "15+",
@@ -24,7 +24,7 @@ const courses = [
   },
   {
     id: 3,
-    thumbnail: "/gallery/3.jpeg",
+    thumbnail: "/courses/madhubani.jpeg",
     className: "MADHUBANI PAINTING",
     classType: "Base: Fabric, Paper, Canvas",
     ageGroup: "15+",
@@ -36,7 +36,7 @@ const courses = [
   },
   {
     id: 4,
-    thumbnail: "/gallery/3.jpeg",
+    thumbnail: "/courses/reliefart.jpeg",
     className:
       "RELIEF ART WORK",
     classType: "Basic + Advance | Base: Ply, Wood, Mirror, Ceramic",
@@ -49,7 +49,7 @@ const courses = [
   },
   {
     id: 5,
-    thumbnail: "/gallery/3.jpeg",
+    thumbnail: "/courses/pichwai.jpeg",
     className:
       "PICHWAI ART",
     classType: "Base: Paper, Marble Tile, Fabric",

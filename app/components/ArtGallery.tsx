@@ -3,13 +3,60 @@
 import Image from "next/image";
 
 const images = [
-  "/gallery/1.jpg",
-  "/gallery/3.jpeg",
+  "/gallery/1.jpeg",
+  "/gallery/2.jpeg",
   "/gallery/3.jpeg",
   "/gallery/4.jpeg",
   "/gallery/5.jpeg",
   "/gallery/6.jpeg",
   "/gallery/7.jpeg",
+  "/gallery/8.jpeg",
+  "/gallery/9.jpg",
+  "/gallery/10.jpeg",
+  "/gallery/11.jpeg",
+  "/gallery/12.jpg",
+  "/gallery/13.jpeg",
+  "/gallery/14.jpg",
+  "/gallery/15.jpeg",
+  "/gallery/16.jpeg",
+  "/gallery/17.jpeg",
+  "/gallery/18.jpg",
+  "/gallery/19.jpeg",
+  "/gallery/20.jpeg",
+  "/gallery/21.jpeg",
+  "/gallery/22.jpg",
+  "/gallery/23.jpg",
+  "/gallery/24.jpg",
+  "/gallery/25.jpg",
+  "/gallery/26.jpg",
+  "/gallery/27.jpg",
+  "/gallery/28.jpg",
+  "/gallery/29.jpg",
+  "/gallery/30.jpg",
+  "/gallery/31.jpg",
+  "/gallery/32.jpg",
+  "/gallery/33.jpg",
+  "/gallery/34.jpg",
+  "/gallery/35.jpg",
+  "/gallery/36.jpg",
+  "/gallery/37.jpg",
+  "/gallery/38.jpg",
+  "/gallery/39.jpeg",
+  "/gallery/40.jpeg",
+  "/gallery/41.jpeg",
+  "/gallery/42.jpeg",
+  "/gallery/43.jpeg",
+  "/gallery/44.jpeg",
+  "/gallery/45.jpeg",
+  "/gallery/46.jpeg",
+  "/gallery/47.jpeg",
+  "/gallery/48.jpeg",
+  "/gallery/49.jpeg",
+  "/gallery/50.jpeg",
+  "/gallery/51.jpeg",
+  "/gallery/52.jpeg",
+  
+
 ];
 
 export default function ArtGallery() {
@@ -85,11 +132,11 @@ export default function ArtGallery() {
         }
 
         .animate-marquee-left {
-          animation: marquee-left 28s linear infinite;
+          animation: marquee-left 90s linear infinite;
         }
 
         .animate-marquee-right {
-          animation: marquee-right 28s linear infinite;
+          animation: marquee-right 90s linear infinite;
         }
       `}</style>
     </section>

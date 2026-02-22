@@ -67,21 +67,39 @@ export default function Navbar() {
               style={{ fontFamily: "Futura PT" }}
             >
               <li className="hover:underline underline-offset-4 cursor-pointer">
-                Home
+                <a href="#gallery" onClick={(e) => handleSmoothScroll(e, "home")}>
+                  Home
+                </a>
+              </li>
+              <li className="hover:underline underline-offset-4 cursor-pointer">
+                <a href="#gallery" onClick={(e) => handleSmoothScroll(e, "aboutUs")}>
+                  About Us
+                </a>
               </li>
               <li className="hover:underline underline-offset-4 cursor-pointer">
                 <a href="#courses" onClick={(e) => handleSmoothScroll(e, "courses")}>
                   Courses
                 </a>
               </li>
+
+              <li className="hover:underline underline-offset-4 cursor-pointer">
+                <a href="#classes" onClick={(e) => handleSmoothScroll(e, "classes")}>
+                  Classes
+                </a>
+              </li>
+
+              <li className="hover:underline underline-offset-4 cursor-pointer">
+                  <a href="#store" onClick={(e) => handleSmoothScroll(e, "store")}>
+                    Store
+                  </a>
+                </li>
+              
               <li className="hover:underline underline-offset-4 cursor-pointer">
                 <a href="#gallery" onClick={(e) => handleSmoothScroll(e, "gallery")}>
                   Gallery
                 </a>
               </li>
-              <li className="hover:underline underline-offset-4 cursor-pointer">
-                About Us
-              </li>
+              
               <li className="hover:underline underline-offset-4 cursor-pointer">
                 <a href="#contact-us" onClick={(e) => handleSmoothScroll(e, "contact-us")}>
                   Contact

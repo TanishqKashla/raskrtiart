@@ -1,7 +1,7 @@
 export const classesData = [
     {
         id: 1,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/tanjore.jpg",
         className: "TANJOUR PAINTING",
         ageGroup: "12+",
         fee: "18000",
@@ -12,7 +12,7 @@ export const classesData = [
     },
     {
         id: 2,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/resin.jpeg",
         className: "RESIN ART (BASIC)",
         ageGroup: "12+",
         fee: "4000",
@@ -23,7 +23,7 @@ export const classesData = [
     },
     {
         id: 3,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/warli.jpeg",
         className: "WARLI ART",
         ageGroup: "8+",
         fee: "2500",
@@ -34,7 +34,7 @@ export const classesData = [
     },
     {
         id: 4,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/gond.jpeg",
         className: "GOND ART",
         ageGroup: "8+",
         fee: "2500",
@@ -45,7 +45,7 @@ export const classesData = [
     },
     {
         id: 5,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/bestoutofwaste.jpeg",
         className: "BEST OUT OF WASTE",
         ageGroup: "8+",
         fee: "1200",
@@ -56,7 +56,7 @@ export const classesData = [
     },
     {
         id: 6,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/clayart.jpg",
         className: "CLAY ART",
         ageGroup: "8+",
         fee: "8000",
@@ -67,7 +67,7 @@ export const classesData = [
     },
     {
         id: 7,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/madhubani.jpeg",
         className: "MADHUBANI (BASIC)",
         ageGroup: "8+",
         fee: "5000",
@@ -78,7 +78,7 @@ export const classesData = [
     },
     {
         id: 8,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/fabric.jpeg",
         className: "FABRIC PAINTING",
         ageGroup: "12+",
         fee: "7000",
@@ -89,7 +89,7 @@ export const classesData = [
     },
     {
         id: 9,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/reliefart.jpeg",
         className: "RELIEF ART WORK",
         ageGroup: "12+",
         fee: "28000",
@@ -100,7 +100,7 @@ export const classesData = [
     },
     {
         id: 10,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/acryilic.jpeg",
         className: "ACRYLIC COLOUR",
         ageGroup: "8+",
         fee: "8000",
@@ -111,7 +111,7 @@ export const classesData = [
     },
     {
         id: 11,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/portrait.jpeg",
         className: "PORTRAIT MAKING",
         ageGroup: "15+",
         fee: "10000",
@@ -122,7 +122,7 @@ export const classesData = [
     },
     {
         id: 12,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/candlemaking.jpeg",
         className: "CANDLE MAKING",
         ageGroup: "12+",
         fee: "4000",
@@ -133,7 +133,7 @@ export const classesData = [
     },
     {
         id: 13,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/fineart.jpeg",
         className: "FINE ART",
         ageGroup: "6+",
         fee: "7500",
@@ -144,7 +144,7 @@ export const classesData = [
     },
     {
         id: 14,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/papercraft.jpeg",
         className: "PAPER CRAFT",
         ageGroup: "4+",
         fee: "1500",
@@ -155,7 +155,7 @@ export const classesData = [
     },
     {
         id: 15,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/glasspainting.jpg",
         className: "GLASS PAINTING",
         ageGroup: "8+",
         fee: "800",
@@ -166,7 +166,7 @@ export const classesData = [
     },
     {
         id: 16,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/lippan.jpg",
         className: "LIPPAN",
         ageGroup: "12+",
         fee: "4000",
@@ -177,7 +177,7 @@ export const classesData = [
     },
     {
         id: 17,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/mandala.jpg",
         className: "MANDALA",
         ageGroup: "8+",
         fee: "4000",
@@ -188,7 +188,7 @@ export const classesData = [
     },
     {
         id: 18,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/dotilism.jpeg",
         className: "DOTILISM",
         ageGroup: "12+",
         fee: "4000",
@@ -199,7 +199,7 @@ export const classesData = [
     },
     {
         id: 19,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/textureart.jpg",
         className: "TEXTURE ART",
         ageGroup: "12+",
         fee: "1500",
@@ -210,7 +210,7 @@ export const classesData = [
     },
     {
         id: 20,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/watercolour.jpg",
         className: "WATER COLOUR",
         ageGroup: "12+",
         fee: "8000",
@@ -221,7 +221,7 @@ export const classesData = [
     },
     {
         id: 21,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/oilcolour.jpg",
         className: "OIL COLOUR",
         ageGroup: "12+",
         fee: "15000",
@@ -232,7 +232,7 @@ export const classesData = [
     },
     {
         id: 22,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/postercolour.jpg",
         className: "POSTER COLOUR",
         ageGroup: "8+",
         fee: "3500",
@@ -243,7 +243,7 @@ export const classesData = [
     },
     {
         id: 23,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/softpastel.jpg",
         className: "SOFT PASTEL",
         ageGroup: "12+",
         fee: "2500",
@@ -254,7 +254,7 @@ export const classesData = [
     },
     {
         id: 24,
-        thumbnail: "/gallery/3.jpeg",
+        thumbnail: "/classes/pichwai.png",
         className: "PICHWAI ART",
         ageGroup: "12+",
         fee: "2500",
@@ -263,15 +263,15 @@ export const classesData = [
         timings: "3.30-5.00 PM (Evening)",
         materials: "Material Included",
     },
-    {
-        id: 25,
-        thumbnail: "/gallery/3.jpeg",
-        className: "PICHWAI ART",
-        ageGroup: "12+",
-        fee: "2500",
-        totalClasses: 6,
-        days: "Tue-Thurs",
-        timings: "3.30-5.00 PM (Evening)",
-        materials: "Material Included",
-    },
+    // {
+    //     id: 25,
+    //     thumbnail: "/gallery/3.jpeg",
+    //     className: "PICHWAI ART",
+    //     ageGroup: "12+",
+    //     fee: "2500",
+    //     totalClasses: 6,
+    //     days: "Tue-Thurs",
+    //     timings: "3.30-5.00 PM (Evening)",
+    //     materials: "Material Included",
+    // },
 ];

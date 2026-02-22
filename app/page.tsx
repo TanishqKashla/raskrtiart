@@ -51,7 +51,7 @@ const page = () => {
 
 
       {/* ============Classes Section============ */}
-      <section className="bg-[#FBF4EC] py-12 md:py-20">
+      <section id='classes' className="bg-[#FBF4EC] py-12 md:py-20">
         <div className="max-w-[1395px] mx-auto px-5 md:px-8">
 
           {/* Heading + Button */}
@@ -78,7 +78,7 @@ const page = () => {
 
 
       {/* ============trending and new section============  */}
-      <section className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-12 md:py-20">
+      <section id='store' className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="">
           {/* Heading */}
           <div className="flex items-center justify-between mb-12">

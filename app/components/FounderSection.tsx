@@ -55,11 +55,7 @@
                       <p className="text-5xl font-medium text-white font-secondary mb-7">Shweta Singh,<br /> Founder Raskrti Art</p>
                       <p
                         className="text-xl font-book text-white leading-relaxed mb-4 font-secondary">
-                        Donec consequat ultrices neque, asce lersqu nulla varius at.
-                        Praesent tolbero, luctus vestibul umnuncmonc consequat versqu
-                        nulla varius at. Donec consequat ultrices neque, asce lersqu
-                        nulla varius at. Praesent tolbero, luctus vestibul umnuncmonc
-                        consequat versqu nulla varius at.
+                       Shweta Singh, Founder of Raskrti Art School, is an experienced artist and mentor with over 30 years in fine arts. Trained at Ranglok Lalit Kala Academy and Triveni Kala Sangam, she specializes in Tanjore painting, relief art, and various traditional and contemporary art forms. A Fevicryl Expert Art Teacher and registered artisan with the Government of India, she continues to inspire creativity and nurture aspiring artists through her passion and guidance.
                       </p>
 
                     </div>
