@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const images = [
+const row1Images = [
   "/gallery/1.jpeg",
   "/gallery/2.jpeg",
   "/gallery/3.jpeg",
@@ -29,6 +29,9 @@ const images = [
   "/gallery/24.jpg",
   "/gallery/25.jpg",
   "/gallery/26.jpg",
+];
+
+const row2Images = [
   "/gallery/27.jpg",
   "/gallery/28.jpg",
   "/gallery/29.jpg",
@@ -55,9 +58,7 @@ const images = [
   "/gallery/50.jpeg",
   "/gallery/51.jpeg",
   "/gallery/52.jpeg",
-  
-
-];
+]
 
 export default function ArtGallery() {
   return (
@@ -72,12 +73,12 @@ export default function ArtGallery() {
       </div>
 
       {/* ROW 1 – Right to Left */}
-      <div className="h-[300px] overflow-hidden mb-6">
+      <div className="h-[230px] md:h-[300px] overflow-hidden mb-6">
         <div className="flex gap-6 animate-marquee-left w-max">
-          {images.concat(images).map((src, index) => (
+          {row1Images.concat(row1Images).map((src, index) => (
             <div
               key={`row1-${index}`}
-              className="h-[300px] w-fit rounded-xl overflow-hidden"
+              className="h-[230px] md:h-[300px] w-fit rounded-xl overflow-hidden"
             >
               <Image
                 src={src}
@@ -92,18 +93,19 @@ export default function ArtGallery() {
       </div>
 
       {/* ROW 2 – Left to Right */}
-      <div className="h-[300px] overflow-hidden">
+      <div className="h-[230px] md:h-[300px] overflow-hidden">
         <div className="flex gap-6 animate-marquee-right w-max">
-          {images.concat(images).map((src, index) => (
+          {row2Images.concat(row2Images).map((src, index) => (
             <div
               key={`row2-${index}`}
-              className="h-[300px] w-fit rounded-xl overflow-hidden"
+              className="h-[230px] md:h-[300px] w-fit rounded-xl overflow-hidden"
             >
               <Image
                 src={src}
                 alt="Gallery artwork"
                 width={220}
                 height={300}
+                quality={80}
                 className="object-cover h-full w-full"
               />
             </div>
@@ -132,11 +134,17 @@ export default function ArtGallery() {
         }
 
         .animate-marquee-left {
-          animation: marquee-left 90s linear infinite;
+          animation: marquee-left 100s linear infinite;
         }
 
         .animate-marquee-right {
-          animation: marquee-right 90s linear infinite;
+          animation: marquee-right 100s linear infinite;
+        }
+
+        /* Pause animation on hover */
+        .animate-marquee-left:hover,
+        .animate-marquee-right:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>

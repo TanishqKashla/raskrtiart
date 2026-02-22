@@ -28,7 +28,7 @@ export default function Carousel() {
 
   return (
     <section id="home" className="w-full relative flex justify-center bg-[#FBF4EC] px-4  pb-1 md:mb-8">
-      <div className="relative w-full md:max-w-[1395px] h-[400px] md:h-[600px] overflow-hidden rounded-lg md:rounded-2xl">
+      <div className="relative w-full md:max-w-[1395px] h-[450px] md:h-[600px] overflow-hidden rounded-lg md:rounded-2xl">
 
         {/* Slides */}
         {CarouselImages.map((img, index) => (

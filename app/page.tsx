@@ -1,8 +1,7 @@
-import React from 'react'
+"use client";
+
+import React, { useState } from 'react'
 import Carousel from './components/carausal'
-import Navbar from './components/navbar'
-import AboutSection from './components/about'
-import CourseCard from './components/ClassCard'
 import ExploreArtworks from './components/ExploreArtworks'
 import ProductCard from './components/ProductCard'
 import ArtGallery from './components/ArtGallery'
@@ -12,14 +11,13 @@ import ContactUs from './components/contactUs'
 import Footer from './components/footer'
 import Button from './components/Button';
 import Testimonials from './components/Testimonials'
-import { classesData } from './data/classesData'
 import { storeProducts } from './data/storeData'
 import CoursesOffer from './components/CourseSection'
-import ClassCard from './components/ClassCard'
+import ClassSection from './components/ClassSection'
+import AboutSection from './components/about'
 
 
-const page = () => {
-
+const Page = () => {
 
   return (
     <div>
@@ -51,26 +49,7 @@ const page = () => {
 
 
       {/* ============Classes Section============ */}
-      <section id='classes' className="bg-[#FBF4EC] py-12 md:py-20">
-        <div className="max-w-[1395px] mx-auto px-5 md:px-8">
-
-          {/* Heading + Button */}
-          <div className="flex items-center justify-between mb-10 md:mb-16">
-            <h2
-              className="text-4xl md:text-5xl text-primary font-primary"
-            >
-              Classes We Offer
-            </h2>
-          </div>
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-y-20 justify-items-center">
-            {classesData.map((cls, index) => (
-              <ClassCard key={index} {...cls} />
-            ))}
-          </div>
-
-        </div>
-      </section>
+      <ClassSection />
 
 
       {/* ============STORE BANNER============ */}
@@ -113,4 +92,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

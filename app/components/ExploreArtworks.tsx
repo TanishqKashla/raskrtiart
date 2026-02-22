@@ -49,7 +49,7 @@ export default function ExploreArtworks() {
           >
             <div>
               <Image
-                src="/gallery/15.jpeg"
+                src="/gallery/45.jpeg"
                 alt="Artwork for Sale"
                 width={360}
                 height={438}

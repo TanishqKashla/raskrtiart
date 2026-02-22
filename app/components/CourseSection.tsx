@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { courses } from "../data/coursesData";
+import { courseEnrollRedirect } from "../utils/whatsappRedirect";
 
 export default function CoursesSection() {
   return (
@@ -13,14 +14,14 @@ export default function CoursesSection() {
         </h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
           {courses.map((course, index) => (
             <div key={index} className="flex flex-col h-full gap-2">
               {/* Image */}
               <div className="relative overflow-hidden h-90 w-full">
                 <Image
                   src={course.thumbnail}
-                  alt={course.className}
+                  alt={course.courseName}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -33,10 +34,10 @@ export default function CoursesSection() {
                 <div>
                   {/* Title */}
                   <h3
-                    className="text-[24px] text-[#323232]  font-medium "
+                    className="text-2xl md:text-[24px] text-[#323232]  font-medium "
                     style={{ fontFamily: "Futura PT" }}
                   >
-                    {course.className}
+                    {course.courseName}
                   </h3>
 
                   <h4 className="text-[16px] text-[#9C3D14] font-medium mb-2">{course.classType && course.classType}</h4>
@@ -51,8 +52,8 @@ export default function CoursesSection() {
                   </div>
                 </div>
 
-                <div className="mt-3">
-                  <div className="space-y-1">
+                <div className="md:mt-3">
+                  <div className="md:space-y-1">
                     <p className="text-[18px] text-[#323232] font-book flex justify-between" style={{ fontFamily: "Futura PT" }}>
                       <span>Total Classes:</span>
                       <span className="font-medium">{course.totalClasses}</span>
@@ -67,11 +68,12 @@ export default function CoursesSection() {
                       className="text-[#9C3D14] text-xl font-bold"
                       style={{ fontFamily: "Microsoft Sans Serif" }}
                     >
-                      ₹ {course.fee}
+                      ₹ {course.fee.toLocaleString()}
                     </span>
                   </div>
                   {/* Enroll Button */}
                   <button
+                    onClick={() => window.open(courseEnrollRedirect({ courseName: course.courseName, ageGroup: course.ageGroup, days: course.days, timings: course.timings, fee: course.fee }), "_blank")}
                     className="w-full bg-[#9C3D14] text-white py-2 text-lg font-medium cursor-pointer"
                     style={{ fontFamily: "Futura PT" }}
                   >

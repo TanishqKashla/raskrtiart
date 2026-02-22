@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { classEnrollRedirect } from "../utils/whatsappRedirect";
 
 interface ClassCardProps {
   thumbnail: string;
   className: string;
   ageGroup: string;
-  fee: string;
+  fee: number;
   totalClasses: number;
   days: string;
   timings: string;
@@ -24,25 +25,6 @@ export default function ClassCard({
   materials,
 }: ClassCardProps) {
 
-  const WHATSAPP_NUMBER = "919643940236";
-
-  const generateWhatsAppLink = () => {
-    const message = `Hello Raskrti Art,
-
-I would like to enroll in the following class:
-
-*Class: ${className}*
-• Age Group: ${ageGroup}
-• Days: ${days}
-• Timings: ${timings}
-• Fee: ${fee}
-
-Please share further details regarding enrollment.
-
-Thank you!`;
-
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  };
 
   return (
     <div className="max-w-7xl h-fit w-full bg-[#FBF4EC] flex flex-col p-4 md:p-0">
@@ -61,7 +43,7 @@ Thank you!`;
       <div className="flex flex-col justify-between flex-1 gap-2">
         <div>
           <h3
-            className="text-[24px] text-[#323232] font-medium uppercase mb-2"
+            className="text-2xl md:text-[24px] text-[#323232] font-medium uppercase mb-2"
             style={{ fontFamily: "Futura PT" }}
           >
             {className}
@@ -75,7 +57,7 @@ Thank you!`;
             </span>}
           </div>
 
-          <div className="space-y-1 mt-2">
+          <div className="md:space-y-1 mt-2">
             <p className="text-[18px] text-[#323232] font-book flex justify-between" style={{ fontFamily: "Futura PT" }}>
               <span>Age Group:</span>
               <span className="font-medium">{ageGroup}</span>
@@ -98,12 +80,12 @@ Thank you!`;
               className="text-[#9C3D14] text-xl font-bold"
               style={{ fontFamily: "Microsoft Sans Serif" }}
             >
-              ₹ {fee}
+              ₹ {fee.toLocaleString()}
             </span>
           </div>
 
           <button
-            onClick={() => window.open(generateWhatsAppLink(), "_blank")}
+            onClick={() => window.open(classEnrollRedirect({ className, ageGroup, days, timings, fee }), "_blank")}
             className="w-full bg-[#9C3D14] text-white py-2 text-lg cursor-pointer hover:bg-[#833310] transition-colors"
             style={{ fontFamily: "Futura PT" }}
           >

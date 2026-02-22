@@ -2,9 +2,9 @@ const courses = [
   {
     id: 1,
     thumbnail: "/courses/fabric.jpg",
-    className: "FABRIC PAINTING",
+    courseName: "FABRIC PAINTING",
     ageGroup: "15+",
-    fee: "10000/-",
+    fee: 10000,
     totalClasses: 24,
     days: "Tue-Thu",
     timings: "3.30-5.00 PM (Evening)",
@@ -13,10 +13,10 @@ const courses = [
   {
     id: 2,
     thumbnail: "/courses/tanjour.jpeg",
-    className: "TANJOUR PAINTING",
+    courseName: "TANJOUR PAINTING",
     classType: "Scratch to Advance",
     ageGroup: "15+",
-    fee: "55000/-",
+    fee: 55000,
     totalClasses: 72,
     days: "Tue-Thu-Sat",
     timings: "11.00-12.30 PM (Morning)",
@@ -25,10 +25,10 @@ const courses = [
   {
     id: 3,
     thumbnail: "/courses/madhubani.jpeg",
-    className: "MADHUBANI PAINTING",
+    courseName: "MADHUBANI PAINTING",
     classType: "Base: Fabric, Paper, Canvas",
     ageGroup: "15+",
-    fee: "8000/-",
+    fee: 8000,
     totalClasses: 24,
     days: "Mon-Wed-Fri",
     timings: "3.30-5.00 PM (Evening)",
@@ -37,11 +37,11 @@ const courses = [
   {
     id: 4,
     thumbnail: "/courses/reliefart.jpeg",
-    className:
+    courseName:
       "RELIEF ART WORK",
     classType: "Basic + Advance | Base: Ply, Wood, Mirror, Ceramic",
       ageGroup: "15+",
-    fee: "42000/-",
+    fee: 42000,
     totalClasses: 36,
     days: "Mon-Wed-Fri",
     timings: "11.30 AM - 1.30 PM (Morning)",
@@ -50,11 +50,11 @@ const courses = [
   {
     id: 5,
     thumbnail: "/courses/pichwai.jpeg",
-    className:
+    courseName:
       "PICHWAI ART",
     classType: "Base: Paper, Marble Tile, Fabric",
       ageGroup: "15+",
-    fee: "40000/-",
+    fee: 40000,
     totalClasses: 36,
     days: "Mon-Wed-Fri",
     timings: "11.30 AM - 1.30 PM (Morning)",

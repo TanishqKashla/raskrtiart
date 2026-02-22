@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 
 export default function ContactUs() {
   return (
@@ -8,7 +9,7 @@ export default function ContactUs() {
       id="contact-us"
       className="relative py-10"
       style={{
-        backgroundImage: "url('/carousel/4.jpg')",
+        backgroundImage: "url('/contactus-bg.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -26,28 +27,30 @@ export default function ContactUs() {
             </h2>
 
             <p
-              className="text-[20px] font-book leading-relaxed mb-5 max-w-md"
+              className="text-[20px] font-book leading-relaxed mb-14 max-w-md"
               style={{ fontFamily: "Futura PT" }}
             >
               At Raskrti Art School, we welcome art lovers of all ages to explore and grow their creativity. Whether you're interested in hobby classes, certified courses, workshops, or diploma programs, our team is here to guide you. Reach out to us for course details, fees, timings, or enrollment support - and let's create something beautiful together.
             </p>
 
             <ul
-              className="space-y-2 text-[20px] font-book"
+              className="space-y-5  text-[20px] font-book"
               style={{ fontFamily: "Futura PT" }}
             >
               <li className="flex items-center gap-3">
-                <span>📞</span>
+                <span><LuPhone className="text-xl" /></span>
                 <span>+91 9643940236</span>
               </li>
 
-              <li className="flex items-center gap-3">
-                <span>✉️</span>
-                <span>raskrtiartandpaintingschool@gmail.com</span>
+              <li className="">
+                <a className="flex items-center gap-3 hover:underline" href="mailto:raskrtiartandpaintingschool@gmail.com">
+                  <span><LuMail className="text-xl" /></span>
+                  <span>raskrtiartandpaintingschool@gmail.com</span>
+                </a>
               </li>
 
               <li className="flex items-start gap-3">
-                <span>📍</span>
+                <span><LuMapPin className="text-xl" /></span>
                 <span>
                   Raskrti Art school 136, Vasant Enclave, Vasant Vihar, New
                   Delhi, Delhi 110057
