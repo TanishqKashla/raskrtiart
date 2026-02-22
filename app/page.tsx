@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from './components/carausal'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar'
 import AboutSection from './components/about'
 import CourseCard from './components/ClassCard'
 import ExploreArtworks from './components/ExploreArtworks'
@@ -8,7 +8,7 @@ import ProductCard from './components/ProductCard'
 import ArtGallery from './components/ArtGallery'
 import EventCarousel from './components/events'
 import FounderSection from './components/FounderSection'
-import ContactUs from './components/ContactUs'
+import ContactUs from './components/contactUs'
 import Footer from './components/footer'
 import Button from './components/Button';
 import Testimonials from './components/Testimonials'
@@ -28,10 +28,10 @@ const page = () => {
       <Carousel />
 
 
-    {/* ============About Section============ */}
+      {/* ============About Section============ */}
       <AboutSection />
 
-      
+
       {/* ============ENROLL NOW BANNER============ */}
       <section className='relative bg-red-400 w-full h-[250px] md:h-[450px] flex flex-col items-center justify-center gap-8'
         style={{ backgroundImage: 'url("/banner.jpeg")', backgroundSize: "cover", backgroundPosition: "center" }}>
@@ -45,7 +45,7 @@ const page = () => {
         </div>
       </section>
 
-      
+
       {/* ============Courses Section============ */}
       <CoursesOffer />
 
