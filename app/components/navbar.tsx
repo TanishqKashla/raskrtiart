@@ -83,7 +83,9 @@ export default function Navbar() {
                 About Us
               </li>
               <li className="hover:underline underline-offset-4 cursor-pointer">
-                Contact
+                <a href="#contact-us" onClick={(e) => handleSmoothScroll(e, "contact-us")}>
+                  Contact
+                </a>
               </li>
             </ul>
 

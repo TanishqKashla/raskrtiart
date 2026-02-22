@@ -1,20 +1,21 @@
 import React from 'react'
 import Carousel from './components/carausal'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import AboutSection from './components/about'
-import CourseCard from './components/CourseCard'
+import CourseCard from './components/ClassCard'
 import ExploreArtworks from './components/ExploreArtworks'
 import ProductCard from './components/ProductCard'
 import ArtGallery from './components/ArtGallery'
 import EventCarousel from './components/events'
 import FounderSection from './components/FounderSection'
-import ContactUs from './components/contactUs'
+import ContactUs from './components/ContactUs'
 import Footer from './components/footer'
 import Button from './components/Button';
 import Testimonials from './components/Testimonials'
-import { classes } from './data/classesData'
+import { classesData } from './data/classesData'
 import { storeProducts } from './data/storeData'
-import CoursesOffer from './components/courses'
+import CoursesOffer from './components/CourseSection'
+import ClassCard from './components/ClassCard'
 
 
 const page = () => {
@@ -37,10 +38,11 @@ const page = () => {
         </div>
       </section>
 
-      {/* Courses */}
+      {/* ============Courses Section============ */}
       <CoursesOffer />
 
-      {/* Courses Section */}
+
+      {/* ============Classes Section============ */}
       <section className="bg-[#FBF4EC] py-12 md:py-20">
         <div className="max-w-[1395px] mx-auto px-5 md:px-8">
 
@@ -51,28 +53,23 @@ const page = () => {
             >
               Classes We Offer
             </h2>
-
-            {/* <button
-              className="bg-[#9C3D14] text-white px-6 py-2 text-lg cursor-pointer"
-              style={{ fontFamily: "Futura PT" }}
-            >
-              See All
-            </button> */}
           </div>
-
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-y-20 justify-items-center">
-            {classes.map((cls, index) => (
-              <CourseCard key={index} {...cls} />
+            {classesData.map((cls, index) => (
+              <ClassCard key={index} {...cls} />
             ))}
           </div>
 
         </div>
       </section>
+
+
+      {/* ============STORE BANNER============ */}
       <ExploreArtworks />
 
-      {/* //trending and new section  */}
 
+      {/* ============trending and new section============  */}
       <section className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="">
           {/* Heading */}
@@ -81,13 +78,6 @@ const page = () => {
               className="text-4xl md:text-5xl text-primary font-primary">
               Trending and New
             </h2>
-
-            {/* <button
-            className="border border-[#9C3D14] text-[#9C3D14] px-4 py-2 text-lg cursor-pointer"
-            style={{ fontFamily: "Futura PT" }}
-          >
-            See All
-          </button> */}
           </div>
 
           {/* Grid */}

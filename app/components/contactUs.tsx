@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section
+    <section id="contact-us"
       className="relative py-10"
       style={{
         backgroundImage: "url('/carousel/4.jpg')",
