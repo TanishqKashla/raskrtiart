@@ -10,7 +10,7 @@ interface ClassCardProps {
   totalClasses: number;
   days: string;
   timings: string;
-  materials: string;
+  materials?: string;
 }
 
 export default function ClassCard({
