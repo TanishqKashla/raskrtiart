@@ -7,6 +7,8 @@ import ProductCard from '@/app/components/ProductCard';
 import ProductGallery from '@/app/components/ProductGallery';
 import Image from 'next/image';
 import { buyProductRedirect } from '@/app/utils/whatsappRedirect';
+import Link from 'next/link';
+import NotFound from '@/app/not-found';
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
@@ -14,9 +16,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const product = storeProducts.find((item) => item.slug === slug);
 
   if (!product || product.inStock === false) {
-    return <div className="text-center py-20 text-2xl font-primary text-primary h-[calc(100vh - 150px)]">
-      <Image src="/404.png" alt="Product Not Found" width={500} height={200} className="mx-auto my-5" />
-    </div>;
+    return <NotFound />;
   }
 
 
@@ -100,16 +100,16 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <div className='py-10'>
         <h2 className='text-4xl font-primary mb-10'>More Paintings</h2>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10'>
-        {/* <div className='flex flex-row overflow-x-scroll gap-5 md:gap-10 pb-5'> */}
+          {/* <div className='flex flex-row overflow-x-scroll gap-5 md:gap-10 pb-5'> */}
           {storeProducts.filter((item) => item.slug !== slug).map((product, index) => (
             <ProductCard key={index} productDetails={{
-            title: product.title,
-            artist: product.artist,
-            size: product.dimensions,
-            price: product.price,
-            image: product.imageData.mainImage.src,
-            slug: product.slug
-          }} />
+              title: product.title,
+              artist: product.artist,
+              size: product.dimensions,
+              price: product.price,
+              image: product.imageData.mainImage.src,
+              slug: product.slug
+            }} />
           ))}
 
         </div>
