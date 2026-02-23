@@ -25,19 +25,21 @@ export default function Footer() {
       {/* top row */}
       <div className="md:max-w-7xl mx-auto px-4  md:px-16 text-white flex flex-col md:flex-row justify-between py-10 gap-10">
         {/* Logo */}
-        <div className="flex gap-3">
-          <img
-            src="/logo.png"
-            alt="Raskrti Art"
-            className="w-12 h-12 object-contain"
-          />
-          <span
-            className="text-[32px] font-regular"
-            style={{ fontFamily: "Mauline" }}
-          >
-            Raskrti Art
-          </span>
-        </div>
+        <a href="/">
+          <div className="flex gap-3">
+            <img
+              src="/logo.png"
+              alt="Raskrti Art"
+              className="w-12 h-12 object-contain"
+            />
+            <span
+              className="text-[32px] font-regular"
+              style={{ fontFamily: "Mauline" }}
+            >
+              Raskrti Art
+            </span>
+          </div>
+        </a>
 
         {/* Links */}
         <div className="flex gap-24">

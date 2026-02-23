@@ -74,7 +74,7 @@ export default function CoursesSection() {
                   {/* Enroll Button */}
                   <button
                     onClick={() => window.open(courseEnrollRedirect({ courseName: course.courseName, ageGroup: course.ageGroup, days: course.days, timings: course.timings, fee: course.fee }), "_blank")}
-                    className="w-full bg-[#9C3D14] text-white py-2 text-lg font-medium cursor-pointer"
+                    className="w-full bg-[#9C3D14] text-white py-2 text-lg font-medium cursor-pointer hover:bg-[#833310] transition-colors"
                     style={{ fontFamily: "Futura PT" }}
                   >
                     Enroll Yourself

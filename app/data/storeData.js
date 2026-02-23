@@ -1,11 +1,11 @@
 export const storeProducts = [
   {
-    title: "Handwoven Kashida Pattu Cushion Covers - Orange",
-    slug: "name-of-painting-goes-here",
+    title: "Krishna and Yashoda Maa",
+    slug: "krishna-and-yashoda-maa",
     artist: "Shweta Singh",
     artistPhoto: "/pfp.jpeg",
     description: "This is a beautiful painting that captures the essence of nature with vibrant colors and intricate details. This is a beautiful painting that captures the essence of nature with vibrant colors and intricate details.This is a beautiful painting that captures the essence of nature with vibrant colors and intricate details.",
-    price: 5625000,
+    price: 56000,
     artStyle: "Abstract",
     medium: "Acrylic on Canvas",
     dimensions: "24 in X 18 in",

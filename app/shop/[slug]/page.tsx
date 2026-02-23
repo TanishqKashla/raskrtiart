@@ -1,9 +1,12 @@
+'use client'
 import Button from '@/app/components/Button';
 import React from 'react'
 import { LuArrowRight } from 'react-icons/lu';
 import { storeProducts } from '@/app/data/storeData';
 import ProductCard from '@/app/components/ProductCard';
 import ProductGallery from '@/app/components/ProductGallery';
+import Image from 'next/image';
+import { buyProductRedirect } from '@/app/utils/whatsappRedirect';
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
@@ -11,16 +14,18 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const product = storeProducts.find((item) => item.slug === slug);
 
   if (!product || product.inStock === false) {
-    return <div className="text-center py-20 text-2xl font-primary text-primary">Product not found</div>;
+    return <div className="text-center py-20 text-2xl font-primary text-primary h-[calc(100vh - 150px)]">
+      <Image src="/404.png" alt="Product Not Found" width={500} height={200} className="mx-auto my-5" />
+    </div>;
   }
 
 
   return (
-    <section className='max-w-[1195px] mx-auto px-5 md:px-8 py-12 md:py-4 gap-10'>
+    <section className='max-w-[1195px] mx-auto px-5 md:px-8 py-5 md:py-4 gap-10'>
       <h2 className='text-2xl font-primary text-primary'>Shop</h2>
 
       {/* Product Details */}
-      <div className='grid grid-cols-2 gap-10 md:gap-16 mt-5'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-5'>
 
         {/* Product Images */}
         <ProductGallery mainImage={product.imageData.mainImage} additionalImages={product.imageData.additionalImages} />
@@ -29,17 +34,17 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
         {/* Product Information */}
         <div className=''>
-          <p className='text-lg mb-5'>Category | {product.medium}</p>
+          <p className='text-lg mb-5'>{product.artStyle} | {product.medium}</p>
 
           <div>
-            <h3 className='font-primary text-primary text-6xl'>{product.title}</h3>
+            <h3 className='font-primary text-primary text-4xl md:text-6xl'>{product.title}</h3>
             <div className='flex gap-4 items-center mt-4'>
               <img src={product.artistPhoto} alt={product.artist} className='h-12 aspect-square rounded-full object-cover' />
               <span className='text-xl'>{product.artist}</span>
             </div>
 
             <p className='font-light font-bold text-2xl my-6'>₹{product.price.toLocaleString()}</p>
-            <p className='text-2xl'>{product.description}</p>
+            <p className='text-xl md:text-2xl'>{product.description}</p>
 
             <div className='w-full flex gap-10 mt-10 mb-10'>
               <div className='flex flex-col'>
@@ -51,12 +56,14 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
                 <p className='text-xl'>{product.medium}</p>
               </div>
             </div>
-            <Button className='flex gap-3 items-center'>Buy Now on Whatsapp <LuArrowRight /></Button>
+            <Button
+              onClick={() => window.open(buyProductRedirect({ productLink: window.location.href, productName: product.title, price: product.price }), "_blank")}
+              className='flex gap-3 items-center'>Buy Now on Whatsapp <LuArrowRight /></Button>
           </div>
 
           {/* Detailed List */}
-          <div className='mt-28'>
-            <h4 className='text-5xl font-primary'>Product Details</h4>
+          <div className='mt-20 md:mt-28'>
+            <h4 className='text-4xl md:text-5xl font-primary'>Product Details</h4>
             <div className='py-6 border-b'>
               <h5 className='text-xl text-primary'>Title</h5>
               <p className='text-xl'>{product.title}</p>
@@ -92,7 +99,8 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
       <div className='py-10'>
         <h2 className='text-4xl font-primary mb-10'>More Paintings</h2>
-        <div className='grid grid-cols-4'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10'>
+        {/* <div className='flex flex-row overflow-x-scroll gap-5 md:gap-10 pb-5'> */}
           {storeProducts.filter((item) => item.slug !== slug).map((product, index) => (
             <ProductCard key={index} productDetails={{
             title: product.title,

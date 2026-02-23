@@ -1,6 +1,6 @@
 export const events = [
   {
-    image: "/events/event1.jpeg",
+    image: "/events/event01.jpeg",
     title: "Exhibited at The Heart Of Delhi (THOA) at Dilli Haat.",
     
   },

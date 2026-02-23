@@ -32,14 +32,16 @@ const Page = () => {
 
       {/* ============ENROLL NOW BANNER============ */}
       <section className='relative bg-red-400 w-full h-[250px] md:h-[450px] flex flex-col items-center justify-center gap-8'
-        style={{ backgroundImage: 'url("/banner.jpeg")', backgroundSize: "cover", backgroundPosition: "center" }}>
+        style={{ backgroundImage: 'url("/banner-bg.jpeg")', backgroundSize: "cover", backgroundPosition: "center" }}>
 
         {/* overlay */}
-        <div className='bg-primary/80 absolute top-0 bottom-0 left-0 z-0 right-0'></div>
+        <div className='bg-primary/70 absolute top-0 bottom-0 left-0 z-0 right-0'></div>
 
-        <div className='relative z-10'>
-          <h1 className='text-4xl md:text-6xl font-primary text-white mb-3'>Enroll Yourself Now!</h1>
-          <Button variant="outlineWhite" className="mt-4">Book Now</Button>
+        <div className='px-10 relative z-10'>
+          <h1 className='text-4xl md:text-6xl font-primary text-white mb-3'>Your Artistic Journey Starts Here!</h1>
+          <Button variant="outlineWhite" className="mt-4">
+            <a href="#classes">Explore Classes</a>
+          </Button>
         </div>
       </section>
 

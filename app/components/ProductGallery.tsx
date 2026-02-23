@@ -69,7 +69,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ mainImage, additionalIm
                 {allImages.map((img, index) => (
                     <div
                         key={index}
-                        className={`relative overflow-hidden h-20 aspect-square rounded-md cursor-pointer border-2 transition-all duration-300 ${activeImage.src === img.src ? 'border-primary ring-1 ring-primary/30 scale-105' : 'border-transparent opacity-80 hover:opacity-100 hover:border-gray-200'
+                        className={`relative overflow-hidden h-16 md:h-20 aspect-square rounded-md cursor-pointer border-2 transition-all duration-300 ${activeImage.src === img.src ? 'border-primary ring-1 ring-primary/30 scale-105' : 'border-transparent opacity-80 hover:opacity-100 hover:border-gray-200'
                             }`}
                         onClick={() => setActiveImage(img)}
                     >
