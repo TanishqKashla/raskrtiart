@@ -15,6 +15,7 @@ import { storeProducts } from './data/storeData'
 import CoursesOffer from './components/CourseSection'
 import ClassSection from './components/ClassSection'
 import AboutSection from './components/about'
+import WhatsAppChat from './components/WhatsAppChat'
 
 
 const Page = () => {
@@ -90,6 +91,7 @@ const Page = () => {
       <FounderSection />
       <ArtGallery />
       <ContactUs />
+      <WhatsAppChat />
     </div>
   )
 }
