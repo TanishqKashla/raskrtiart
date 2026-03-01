@@ -60,6 +60,19 @@ const courses = [
     timings: "11.30 AM - 1.30 PM (Morning)",
     materials: "Material Included",
   },
+  {
+    id: 6,
+    thumbnail: "/courses/fineart.jpeg",
+    courseName:
+      "FINE ART (DIPLOMA)",
+    classType: "Basic + Advance",
+      ageGroup: "12+",
+    fee: 30000,
+    totalClasses: 96,
+    days: "Mon-Wed-Fri",
+    timings: "3.30 PM - 5.30 PM (Evening)",
+  },
+
 ];
 
 export { courses };

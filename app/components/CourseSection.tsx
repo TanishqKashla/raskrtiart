@@ -46,9 +46,9 @@ export default function CoursesSection() {
                     <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-3 py-1 rounded-full w-fit ">
                      {course.days}
                     </span>
-                    <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-3 py-1 rounded-full w-fit ">
-                     {course.materials && course.materials}
-                    </span>
+                    {course.materials && <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-3 py-1 rounded-full w-fit ">
+                     {course.materials}
+                    </span>}
                   </div>
                 </div>
 

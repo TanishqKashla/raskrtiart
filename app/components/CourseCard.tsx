@@ -8,6 +8,7 @@ interface CourseCardProps {
   description: string;
   mode: string;
   price: number;
+  materials?: string;
 }
 
 export default function CourseCard({
@@ -16,6 +17,7 @@ export default function CourseCard({
   description,
   mode,
   price,
+  materials,
 }: CourseCardProps) {
   return (
     <div className="max-w-[1395px] h mx-auto bg-[#FBF4EC] flex flex-col ">
@@ -34,13 +36,13 @@ export default function CourseCard({
             {title}
           </h3>
 
-          <div className="mb-2 flex mt-2 gap-1">
+          <div className="mb-2 flex mt-2 gap-1 ">
             <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-2 py-0 rounded-full">
               {mode}
             </span>{" "}
-            <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-2 py-0 rounded-full">
-              Including Material Kit
-            </span>
+            {materials && <span className="border border-[#9C3D14] text-[#9C3D14] text-sm px-2 py-0 rounded-full">
+              {materials}
+            </span>}
           </div>
 
           <p
