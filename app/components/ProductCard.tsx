@@ -30,6 +30,7 @@ const ProductCard = ({
             fill
             className="object-cover object-center transition-transform duration-300 ease-in-out hover:scale-105"
           />
+          <span className='absolute top-3 right-3 text-md text-primary bg-white border border-primary px-5 py-1 rounded-full'>Made to Order</span>
         </div>
 
         {/* Content */}
