@@ -31,7 +31,7 @@ export default function ExploreArtworks() {
                 className="text-[18px] md:text-[20px] font-book leading-snug mb-0"
                 style={{ fontFamily: "Futura PT" }}
               >
-                Explore the Raskrti Art Store, where creativity transforms into beautifully handcrafted masterpieces. From traditional Tanjore and Madhubani paintings to elegant relief artworks and unique resin creations, each piece reflects passion and precision. Our artworks are thoughtfully designed to add culture, color, and character to your space. Discover art that speaks to you and make it a part of your story.
+                Explore the Raskrti Art Store, where creativity transforms into beautifully handcrafted masterpieces. From traditional Tanjore and Madhubani paintings to elegant relief artworks and unique resin creations, each piece reflects passion and precision. 
               </p>
 
               <button

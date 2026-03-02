@@ -66,13 +66,45 @@ const Page = () => {
           <div className="flex items-center justify-between mb-12">
             <h2
               className="text-4xl md:text-5xl text-primary font-primary">
-              Trending and New
+              Rajasthani Miniature Art
             </h2>
           </div>
 
           {/* Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
-            {storeProducts.map((product, index) => (
+            {storeProducts
+              .filter(product => product.category === "Rajasthani Miniature")
+              .map((product, index) => (
+              <ProductCard key={index} productDetails={{
+                title: product.title,
+                artist: product.artist,
+                size: product.dimensions,
+                price: product.price,
+                image: product.imageData.mainImage.src,
+                slug: product.slug
+              }} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* ============trending and new section============  */}
+      <section id='store' className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-12 md:py-20">
+        <div className="">
+          {/* Heading */}
+          <div className="flex items-center justify-between mb-12">
+            <h2
+              className="text-4xl md:text-5xl text-primary font-primary">
+              Buy Artworks
+            </h2>
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10">
+            {storeProducts
+              .filter(product => product.category != "Rajasthani Miniature")
+              .map((product, index) => (
               <ProductCard key={index} productDetails={{
                 title: product.title,
                 artist: product.artist,
