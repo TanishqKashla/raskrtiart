@@ -13,7 +13,41 @@ import NotFound from '@/app/not-found';
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   const { slug } = await params;
-  const product = storeProducts.find((item) => item.slug === slug);
+
+  // Define a type that covers all possible properties in storeData
+  interface StoreProduct {
+    slug: string;
+    title: string;
+    medium: string;
+    base: string;
+    dimensions: string;
+    timeToMake: string;
+    price: number;
+    artist: string;
+    artistPhoto: string;
+    imageData: {
+      mainImage: {
+        src: string;
+        alt: string;
+      };
+      additionalImages?: {
+        src?: string;
+        alt?: string;
+      }[];
+    };
+    tags?: string[];
+    artStyle?: string;
+    theme?: string;
+    origin?: string;
+    category?: string;
+    inStock?: boolean;
+  }
+
+  const product = storeProducts.find((item: any) => item.slug === slug) as StoreProduct | undefined;
+
+  if (!product) {
+    return <NotFound />;
+  }
 
 
   return (
@@ -24,7 +58,11 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-5'>
 
         {/* Product Images */}
-        <ProductGallery mainImage={product.imageData.mainImage} additionalImages={product.imageData.additionalImages || []} />
+        <ProductGallery
+          mainImage={product.imageData.mainImage}
+          additionalImages={(product.imageData.additionalImages || [])
+            .filter((img): img is { src: string; alt: string } => !!img.src && !!img.alt)}
+        />
 
 
 
