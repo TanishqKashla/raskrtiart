@@ -50,14 +50,14 @@ const Testimonials = () => {
                             className='object-cover object-top'
                         />
                     </div>
-                    <p className='text-xl font-semibold text-primary'>{currentData.name}</p>
-                    <p className='text-xl text-gray-600'>{currentData.about}</p>
+                    {/* <p className='text-xl font-semibold text-primary'>{currentData.name}</p> */}
+                    {/* <p className='text-xl text-gray-600'>{currentData.about}</p> */}
                 </div>
 
                 {/* testimonial text */}
                 <div className='md:w-2/3 flex items-center pl-0 md:pl-10'>
                     <p className='text-xl md:text-2xl leading-relaxed italic opacity-90 text-foreground'>
-                        "{currentData.testimonial}"
+                        "{currentData.testimonial}" - <span className='text-xl font-semibold text-primary'>{currentData.name}</span>
                     </p>
                 </div>
             </div>
