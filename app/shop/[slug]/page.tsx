@@ -74,10 +74,15 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <h3 className='font-primary text-primary text-4xl md:text-6xl'>{product.title}</h3>
             <div>
               {product.tags && (
-                <div className='flex gap-2 mt-3'>
-                  <span className='text-lg text-white bg-yellow-600 px-5 py-1 rounded-full'>Made to Order</span>
+                <div className='flex flex-wrap gap-2 mt-3'>
+                  <span className='text-xs md:text-lg text-white bg-yellow-600 px-2 md:px-5 py-0.5 md:py-1 rounded-full'>Made to Order</span>
                   {product.tags.map((tag, index) => (
-                    <span key={index} className='text-lg text-primary border border-primary bg-primary/10 px-5 py-1 rounded-full'>{tag}</span>
+                    <span
+                      key={index}
+                      className='text-xs md:text-lg text-primary border border-primary bg-primary/10 px-2 md:px-5 py-0.5 md:py-1 rounded-full'
+                    >
+                      {tag}
+                    </span>
                   ))}
                 </div>
               )}
@@ -163,21 +168,60 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
 
       <div className='py-10'>
-        <h2 className='text-4xl font-primary mb-10'>More Paintings</h2>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10'>
-          {/* <div className='flex flex-row overflow-x-scroll gap-5 md:gap-10 pb-5'> */}
-          {storeProducts.filter((item) => item.slug !== slug).map((product, index) => (
-            <ProductCard key={index} productDetails={{
-              title: product.title,
-              artist: product.artist,
-              size: product.dimensions,
-              price: product.price,
-              image: product.imageData.mainImage.src,
-              slug: product.slug
-            }} />
-          ))}
+        {/* compute suggestions lists */}
+        {(() => {
+          // split the products into same-category and others
+          const sameCategory = storeProducts.filter(
+            (item) => item.category === product.category && item.slug !== slug
+          );
+          const otherCategory = storeProducts.filter(
+            (item) => item.category !== product.category && item.slug !== slug
+          );
 
-        </div>
+          // helper for rendering a grid of cards
+          const renderGrid = (items: typeof storeProducts, keyPrefix: string) => (
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10'>
+              {items.map((p, i) => (
+                <ProductCard
+                  key={`${keyPrefix}-${i}`}
+                  productDetails={{
+                    title: p.title,
+                    artist: p.artist,
+                    size: p.dimensions,
+                    price: p.price,
+                    image: p.imageData.mainImage.src,
+                    slug: p.slug,
+                  }}
+                />
+              ))}
+            </div>
+          );
+
+          // determine primary/secondary order based on current category
+          const isMiniature = product.category === 'Rajasthani Miniature';
+
+          return (
+            <>
+              {sameCategory.length > 0 && (
+            <>
+              <h2 className='text-4xl font-primary mb-10'>
+                {isMiniature ? 'More Rajasthani Miniatures' : 'Explore More Artworks'}
+              </h2>
+              {renderGrid(sameCategory, 'primary')}
+            </>
+          )}
+
+          {otherCategory.length > 0 && (
+            <>
+              <h2 className='text-4xl font-primary my-10'>
+                {isMiniature ? 'Explore More Artworks' : 'Rajasthani Miniatures'}
+              </h2>
+              {renderGrid(otherCategory, 'secondary')}
+            </>
+          )}
+            </>
+          );
+        })()}
       </div>
       <div>
 
