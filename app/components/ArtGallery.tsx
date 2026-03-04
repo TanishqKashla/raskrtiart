@@ -88,6 +88,26 @@ export default function ArtGallery() {
   const handleMouseUp = () => {
     setDrag(null);
   };
+
+  const handleTouchStart = (e: React.TouchEvent, row: 1 | 2) => {
+    const scrollContainer = row === 1 ? row1Ref.current : row2Ref.current;
+    if (!scrollContainer) return;
+    setDrag({
+      row,
+      startX: e.touches[0].pageX,
+      scrollLeft: scrollContainer.scrollLeft,
+    });
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!drag) return;
+    const scrollContainer = drag.row === 1 ? row1Ref.current : row2Ref.current;
+    if (!scrollContainer) return;
+
+    const currentX = e.touches[0].pageX;
+    const distance = currentX - drag.startX; // Calculate distance moved
+    scrollContainer.scrollLeft = drag.scrollLeft - distance;
+  };
   return (
     <section id="gallery" className="bg-[#FBF4EC] py-10 overflow-hidden py-20">
       <div className="md:max-w-[1395px] md:mx-auto px-4 md:px-16">
@@ -102,11 +122,14 @@ export default function ArtGallery() {
       {/* ROW 1 – Right to Left */}
       <div
         ref={row1Ref}
-        className="h-[230px] md:h-[300px] overflow-hidden mb-6 cursor-grab active:cursor-grabbing"
+        className="h-[230px] md:h-[300px] overflow-hidden mb-6 cursor-grab active:cursor-grabbing touch-pan-y"
         onMouseDown={(e) => handleMouseDown(e, 1)}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
+        onTouchStart={(e) => handleTouchStart(e, 1)}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleMouseUp}
         style={{ userSelect: "none" }}
       >
         <div className="flex gap-6 animate-marquee-left w-max">
@@ -120,7 +143,8 @@ export default function ArtGallery() {
                 alt="Gallery artwork"
                 width={220}
                 height={300}
-                className="object-cover h-full w-full"
+                draggable={false}
+                className="object-cover h-full w-full pointer-events-none"
               />
             </div>
           ))}
@@ -130,11 +154,14 @@ export default function ArtGallery() {
       {/* ROW 2 – Left to Right */}
       <div
         ref={row2Ref}
-        className="h-[230px] md:h-[300px] overflow-hidden cursor-grab active:cursor-grabbing"
+        className="h-[230px] md:h-[300px] overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y"
         onMouseDown={(e) => handleMouseDown(e, 2)}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
+        onTouchStart={(e) => handleTouchStart(e, 2)}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleMouseUp}
         style={{ userSelect: "none" }}
       >
         <div className="flex gap-6 animate-marquee-right w-max">
@@ -149,7 +176,8 @@ export default function ArtGallery() {
                 width={220}
                 height={300}
                 quality={80}
-                className="object-cover h-full w-full"
+                draggable={false}
+                className="object-cover h-full w-full pointer-events-none"
               />
             </div>
           ))}

@@ -34,18 +34,18 @@ export default function ExploreArtworks() {
                 Explore the Raskrti Art Store, where creativity transforms into beautifully handcrafted masterpieces. From traditional Tanjore and Madhubani paintings to elegant relief artworks and unique resin creations, each piece reflects passion and precision. 
               </p>
 
-              <button
+              {/* <button
                 className="bg-[#9C3D14] w-full md:w-fit px-6 py-3 mt-8 text-lg cursor-pointer"
                 style={{ fontFamily: "Futura PT" }}
               >
                 Shop Now
-              </button>
+              </button> */}
             </div>
           </div>
 
           {/* RIGHT DIV */}
           <div
-            className="flex items-center justify-center p-6 md:p-0 md:w-1/2"
+            className="hidden md:flex md:items-center md:justify-center p-6 md:p-0 md:w-1/2 "
           >
             <div>
               <Image
