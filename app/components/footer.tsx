@@ -1,11 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { LuFacebook, LuInstagram } from "react-icons/lu";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
+
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();
+    if (pathname !== "/") {
+      router.push(`/${id ? `#${id}` : ""}`);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       const offset = 0;
@@ -88,13 +96,13 @@ export default function Footer() {
               style={{ fontFamily: "Futura PT" }}
             >
               <li>
-                <a href="https://www.instagram.com/raskrti/" className="flex items-center gap-2">
+                <a href="https://www.instagram.com/raskrti/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <LuInstagram className="text-xl" />
                   <span>Instagram</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/share/1DcTKqtgtZ/" className="flex items-center gap-2">
+                <a href="https://www.facebook.com/share/1DcTKqtgtZ/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <LuFacebook className="text-xl" />
                   <span>Facebook</span>
                 </a>

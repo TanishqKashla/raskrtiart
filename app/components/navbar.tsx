@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -23,9 +24,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const pathname = usePathname();
+  const router = useRouter();
+
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();
     setIsOpen(false);
+
+    // if not on landing page, navigate there with hash
+    if (pathname !== "/") {
+      router.push(`/${id ? `#${id}` : ""}`);
+      return;
+    }
+
     const element = document.getElementById(id);
     if (element) {
       const offset = 0; // Adjust based on navbar height
@@ -42,7 +53,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-5 md:pt-10 ${show ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 left-0 w-full z-50 bg-primary transition-transform duration-300 py-3 md:py-6 ${show ? "translate-y-0" : "-translate-y-full"
           }`}
       >
         <div className="max-w-[1395px] mx-auto px-4 md:px-20">

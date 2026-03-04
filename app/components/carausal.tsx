@@ -27,7 +27,7 @@ export default function Carousel() {
   };
 
   return (
-    <section id="home" className="w-full relative flex justify-center bg-[#FBF4EC] px-4  pb-1 md:mb-8">
+    <section id="home" className="w-full relative flex justify-center bg-[#FBF4EC] px-4 pb-1 mt-2 md:mt-4 md:mb-4">
       <div className="relative w-full md:max-w-[1395px] h-[450px] md:h-[600px] overflow-hidden rounded-lg md:rounded-2xl">
 
         {/* Slides */}

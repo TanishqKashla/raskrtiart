@@ -28,10 +28,10 @@
             }, []);
 
             return (
-              <section ref={sectionRef} className="bg-[#51200b] py-10">
-                <div className="md:max-w-7xl md:mx-auto py-10 px-4 md:px-8">
-                  <h2 className="text-4xl md:text-5xl text-white mb-20 leading-snug font-primary">Meet the Founder</h2>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+              <section ref={sectionRef} className="bg-[#51200b] py-10 px-4 md:px-8">
+                <div className="md:max-w-7xl md:mx-auto py-0 px-4 md:px-8 ">
+                  <h2 className="text-4xl md:text-5xl text-white mb-15 leading-snug font-primary">Meet the Founder</h2>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center justify-center md:-ml-100">
 
                     {/* Left section */}
                     <div className="flex justify-center lg:justify-end">

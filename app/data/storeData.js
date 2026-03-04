@@ -23,7 +23,7 @@ export const storeProducts = [
             ]
     },
     inStock: true,
-    tags: ["Made to Order", "nature", "vibrant", "intricate"],
+    tags: [ "nature", "vibrant", "intricate"],
   },
   {
       category: "Rajasthani Miniature",
@@ -48,7 +48,7 @@ export const storeProducts = [
       ]
     },
     inStock: true,
-    tags: ["Made to Order", "nature", "vibrant", "intricate"],
+    tags: [ "nature", "vibrant", "intricate"],
   },
   {
       category: "Rajasthani Miniature",
@@ -73,7 +73,7 @@ export const storeProducts = [
       ]
     },
     inStock: true,
-    tags: ["Made to Order", "nature", "vibrant", "intricate"],
+    tags: [ "nature", "vibrant", "intricate"],
   },
   {
       category: "Rajasthani Miniature",
@@ -98,7 +98,7 @@ export const storeProducts = [
       ]
     },
     inStock: true,
-    tags: ["Made to Order", "nature", "vibrant", "intricate"],
+    tags: [ "nature", "vibrant", "intricate"],
   },
   {
       category: "Rajasthani Miniature",
@@ -123,7 +123,7 @@ export const storeProducts = [
       ]
     },
     inStock: true,
-    tags: ["Made to Order", "nature", "vibrant", "intricate"],
+    tags: [ "nature", "vibrant", "intricate"],
   },
     {
     category: "Rajasthani Miniature",
@@ -148,7 +148,7 @@ export const storeProducts = [
       ]
     },
     inStock: true,
-    tags: ["Made to Order", "nature", "vibrant", "intricate"],
+    tags: [ "nature", "vibrant", "intricate"],
   },
   {
     category: "general",

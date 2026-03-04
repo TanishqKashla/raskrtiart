@@ -118,46 +118,46 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           </div>
 
           {/* Detailed List */}
-          <div className='mt-20 md:mt-28'>
+          <div className='mt-10 md:mt-15'>
             <h4 className='text-4xl md:text-5xl font-primary'>Product Details</h4>
-            <div className='py-6 border-b'>
+            <div className='py-3 border-b'>
               <h5 className='text-xl text-primary'>Title</h5>
               <p className='text-xl'>{product.title}</p>
             </div>
-            <div className='py-6 border-b'>
+            <div className='py-3 border-b'>
               <h5 className='text-xl text-primary'>Artist</h5>
               <p className='text-xl'>{product.artist}</p>
             </div>
             {product.artStyle && (
-              <div className='py-6 border-b'>
+              <div className='py-3 border-b'>
                 <h5 className='text-xl text-primary'>Art Style</h5>
                 <p className='text-xl'>{product.artStyle}</p>
               </div>
             )}
-            <div className='py-6 border-b'>
+            <div className='py-3 border-b'>
               <h5 className='text-xl text-primary'>Medium</h5>
               <p className='text-xl'>{product.medium}</p>
             </div>
-            <div className='py-6 border-b'>
+            <div className='py-3 border-b'>
               <h5 className='text-xl text-primary'>Base</h5>
               <p className='text-xl'>{product.base}</p>
             </div>
-            <div className='py-6 border-b'>
+            <div className='py-3 border-b'>
               <h5 className='text-xl text-primary'>Dimensions</h5>
               <p className='text-xl'>{product.dimensions}</p>
             </div>
             {product.theme && (
-              <div className='py-6 border-b'>
+              <div className='py-3 border-b'>
                 <h5 className='text-xl text-primary'>Theme</h5>
                 <p className='text-xl'>{product.theme}</p>
               </div>
             )}
-            <div className='py-6 border-b'>
+            <div className='py-3 border-b'>
               <h5 className='text-xl text-primary'>Time to Make</h5>
               <p className='text-xl'>{product.timeToMake}</p>
             </div>
             {product.origin && (
-              <div className='py-6'>
+              <div className='py-3'>
                 <h5 className='text-xl text-primary'>Origin</h5>
                 <p className='text-xl'>{product.origin}</p>
               </div>
@@ -205,7 +205,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               {sameCategory.length > 0 && (
             <>
               <h2 className='text-4xl font-primary mb-10'>
-                {isMiniature ? 'More Rajasthani Miniatures' : 'Explore More Artworks'}
+                {isMiniature ? 'More Miniature Artworks' : 'Explore More Artworks'}
               </h2>
               {renderGrid(sameCategory, 'primary')}
             </>
@@ -214,7 +214,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           {otherCategory.length > 0 && (
             <>
               <h2 className='text-4xl font-primary my-10'>
-                {isMiniature ? 'Explore More Artworks' : 'Rajasthani Miniatures'}
+                {isMiniature ? 'Explore More Artworks' : 'Buy Miniature Artworks'}
               </h2>
               {renderGrid(otherCategory, 'secondary')}
             </>

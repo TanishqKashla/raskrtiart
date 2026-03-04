@@ -22,15 +22,17 @@ export default function EventCarousel() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const maxIndex = isMobile ? events.length - 1 : Math.max(0, events.length - 3);
+
   const next = () => {
     setCurrentIndex((prev) =>
-      prev === events.length - 1 ? 0 : prev + 1
+      prev >= maxIndex ? 0 : prev + 1
     );
   };
 
   const prev = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? events.length - 1 : prev - 1
+      prev <= 0 ? maxIndex : prev - 1
     );
   };
 
