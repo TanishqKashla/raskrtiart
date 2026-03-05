@@ -334,7 +334,7 @@ export const storeProducts = [
     dimensions: "18 X 24\"",
     imageData: {
       mainImage: {
-        src: "/store/Shrinath Big Gold/1.jpg",
+        src: "/store/Shrinath Big Gold/1.jpeg",
         alt: "Shrinath Big Gold"
       },
       additionalImages: [
