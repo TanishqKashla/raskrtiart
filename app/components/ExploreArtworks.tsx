@@ -38,6 +38,7 @@ export default function ExploreArtworks() {
                 className="bg-[#9C3D14] w-full md:w-fit px-6 py-3 mt-8 text-lg cursor-pointer"
                 style={{ fontFamily: "Futura PT" }}
               >
+              
                 Shop Now
               </button> */}
             </div>
