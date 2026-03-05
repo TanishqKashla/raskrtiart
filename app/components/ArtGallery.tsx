@@ -1,17 +1,30 @@
 "use client";
 
 import Image from "next/image";
+<<<<<<< Updated upstream
 import { useState, useRef } from "react";
 
 const row1Images = [
   "/gallery/1.jpeg",
   "/gallery/2.jpeg",
+=======
+import { useState } from "react";
+
+/**
+ * Add ALL your gallery images here (no repeats)
+ * Only these will ever be shown
+ */
+const allImages = [
+  "/gallery/1.jpg",
+  "/gallery/2.jpg",
+>>>>>>> Stashed changes
   "/gallery/3.jpeg",
   "/gallery/4.jpeg",
   "/gallery/5.jpeg",
   "/gallery/6.jpeg",
   "/gallery/7.jpeg",
   "/gallery/8.jpeg",
+<<<<<<< Updated upstream
   "/gallery/9.jpg",
   "/gallery/10.jpeg",
   "/gallery/11.jpeg",
@@ -111,14 +124,45 @@ export default function ArtGallery() {
   return (
     <section id="gallery" className="bg-[#FBF4EC] py-10 overflow-hidden py-20">
       <div className="md:max-w-[1395px] md:mx-auto px-4 md:px-16">
+=======
+  "/gallery/9.jpeg",
+  "/gallery/10.jpeg",
+  "/gallery/11.jpeg",
+  "/gallery/12.jpeg",
+  "/gallery/13.jpeg",
+  "/gallery/14.jpeg",
+  "/gallery/15.jpeg",
+  "/gallery/16.jpeg",
+  
+];
+
+const IMAGES_PER_LOAD = 12;
+
+export default function ArtGallery() {
+  const [visibleCount, setVisibleCount] = useState(IMAGES_PER_LOAD);
+
+  const visibleImages = allImages.slice(0, visibleCount);
+  const hasMore = visibleCount < allImages.length;
+
+  const loadMore = () => {
+    setVisibleCount((prev) =>
+      Math.min(prev + IMAGES_PER_LOAD, allImages.length)
+    );
+  };
+
+  return (
+    <section className="bg-[#FBF4EC] py-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-16">
+
+>>>>>>> Stashed changes
         {/* Heading */}
         <h2
           className="text-3xl md:text-5xl text-[#9C3D14] mb-10 font-primary"
         >
           Raskrti Art Gallery
         </h2>
-      </div>
 
+<<<<<<< Updated upstream
       {/* ROW 1 – Right to Left */}
       <div
         ref={row1Ref}
@@ -137,20 +181,38 @@ export default function ArtGallery() {
             <div
               key={`row1-${index}`}
               className="h-[230px] md:h-[300px] w-fit rounded-xl overflow-hidden"
+=======
+        {/* Masonry Grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
+          {visibleImages.map((src, index) => (
+            <div
+              key={index}
+              className="mb-6 break-inside-avoid rounded-xl overflow-hidden group"
+>>>>>>> Stashed changes
             >
               <Image
                 src={src}
                 alt="Gallery artwork"
+<<<<<<< Updated upstream
                 width={220}
                 height={300}
                 draggable={false}
                 className="object-cover h-full w-full pointer-events-none"
+=======
+                width={800}
+                height={1000}
+                className="
+                  w-full h-auto object-contain
+                  transition-transform duration-500 ease-out
+                  group-hover:translate-y-2
+                "
+>>>>>>> Stashed changes
               />
             </div>
           ))}
         </div>
-      </div>
 
+<<<<<<< Updated upstream
       {/* ROW 2 – Left to Right */}
       <div
         ref={row2Ref}
@@ -224,6 +286,22 @@ export default function ArtGallery() {
           cursor: grabbing;
         }
       `}</style>
+=======
+        {/* Load More (only if more images exist) */}
+        {hasMore && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={loadMore}
+              className="bg-[#9C3D14] text-white px-8 py-3 text-sm"
+              style={{ fontFamily: "Futura PT" }}
+            >
+              Load More
+            </button>
+          </div>
+        )}
+
+      </div>
+>>>>>>> Stashed changes
     </section>
   );
 }
