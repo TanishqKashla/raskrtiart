@@ -59,11 +59,7 @@ const Page = () => {
       <ExploreArtworks />
 
 
-      {/* ============trending and new section============  */}
-      
-
-
-      {/* ============trending and new section============  */}
+      {/* ============buy artworks section============  */}
       <section id='store' className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-6 md:py-10">
         <div className="">
           {/* Heading */}
@@ -92,6 +88,8 @@ const Page = () => {
         </div>
       </section>
 
+
+      {/* ============rajsthani miniature artworks section============  */}
       <section id='store' className="md:max-w-[1395px] md:mx-auto px-4 md:px-8 py-12 md:py-20">
         <div className="">
           {/* Heading */}
