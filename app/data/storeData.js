@@ -190,7 +190,7 @@ export const storeProducts = [
     dimensions: "A4",
     imageData: {
       mainImage: {
-        src: "/store/Madhubani Painting yellowred/1.jpg",
+        src: "/store/Madhubani Painting yellowred/madhubani.jpg",
         alt: "Madhubani Painting Yellow Red"
       },
       additionalImages: [

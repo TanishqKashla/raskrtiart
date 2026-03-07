@@ -1,68 +1,107 @@
 "use client";
-import Image from 'next/image';
-import React, { useState } from 'react';
-import { LuChevronLeft, LuChevronRight } from 'react-icons/lu';
-import { TestimonialsData } from '../data/testimonials';
+
+import React, { useState } from "react";
+import Image from "next/image";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { TestimonialsData } from "../data/testimonials";
+
+const videos = [
+  "/testimonials/video1.mp4",
+  "/testimonials/video2.mp4",
+  "/testimonials/video3.mp4",
+];
+
+const sideImages = [
+  "/testimonials/img1.jpeg",
+  "/testimonials/img3.jpeg",
+  "/testimonials/shweta.png",
+];
 
 const Testimonials = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const totalSlides = videos.length + TestimonialsData.length;
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev === 0 ? TestimonialsData.length - 1 : prev - 1));
-    };
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+  };
 
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % TestimonialsData.length);
-    };
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalSlides);
+  };
 
-    const currentData = TestimonialsData[currentIndex];
+  const isVideo = currentIndex < videos.length;
+  const testimonialIndex = currentIndex - videos.length;
 
-    // Safety check in case data is empty
-    if (!currentData) return null;
+  return (
+    <section className="max-w-[1395px] mx-auto py-10">
 
-    return (
-        <section className='max-w-[1395px] mx-auto py-28'>
-            <div className='flex justify-between mb-20 px-4 md:px-8'>
-                <h1 className='text-3xl md:text-5xl font-primary text-primary'>WHAT PEOPLE SAY</h1>
+      {/* Heading */}
+      <div className="flex justify-between mb-6 px-4 md:px-8">
+        <h1 className="text-3xl md:text-5xl font-primary text-primary">
+          WHAT PEOPLE SAY
+        </h1>
 
-                {/* left right button */}
-                <div className='flex gap-5'>
-                    <LuChevronLeft
-                        onClick={prevSlide}
-                        className='text-2xl text-primary hover:cursor-pointer hover:text-[#9C3D14] transition-colors select-none'
-                    />
-                    <LuChevronRight
-                        onClick={nextSlide}
-                        className='text-2xl text-primary hover:cursor-pointer hover:text-[#9C3D14] transition-colors select-none'
-                    />
-                </div>
+        <div className="flex gap-5">
+          <LuChevronLeft
+            onClick={prevSlide}
+            className="text-2xl text-primary hover:cursor-pointer hover:text-[#9C3D14]"
+          />
+          <LuChevronRight
+            onClick={nextSlide}
+            className="text-2xl text-primary hover:cursor-pointer hover:text-[#9C3D14]"
+          />
+        </div>
+      </div>
+
+      {/* VIDEO + IMAGE LAYOUT */}
+      {isVideo && (
+        <div className="flex justify-center px-4 md:px-8">
+          <div className="flex gap-4 w-full max-w-3xl">
+
+            {/* LEFT IMAGE */}
+            <div className="relative w-1/3 h-[480px] rounded-xl overflow-hidden shadow-xl">
+              <Image
+                src={sideImages[currentIndex]}
+                alt="testimonial visual"
+                fill
+                className="object-cover"
+              />
             </div>
 
-            <div key={currentIndex} className='flex flex-col md:flex-row px-5 md:px-24 justify-between w-full animate-slide-in'>
-
-                {/* photo and name */}
-                <div className="shrink-0 mb-8 md:mb-0 flex flex-col items-start bg-transparent">
-                    <div className='relative rounded-tr-full rounded-tl-full overflow-hidden h-50 md:h-80 aspect-[10/11] mb-3 shadow-lg'>
-                        <Image
-                            src={currentData.image}
-                            alt={currentData.name}
-                            fill
-                            className='object-cover object-top'
-                        />
-                    </div>
-                    {/* <p className='text-xl font-semibold text-primary'>{currentData.name}</p> */}
-                    {/* <p className='text-xl text-gray-600'>{currentData.about}</p> */}
-                </div>
-
-                {/* testimonial text */}
-                <div className='md:w-2/3 flex items-center pl-0 md:pl-10'>
-                    <p className='text-xl md:text-2xl leading-relaxed italic opacity-90 text-foreground'>
-                        "{currentData.testimonial}" - <span className='text-xl font-semibold text-primary'>{currentData.name}</span>
-                    </p>
-                </div>
+            {/* RIGHT VIDEO */}
+            <div className="w-2/3 bg-[#FBF4EC] rounded-xl shadow-xl p-2">
+              <video
+                key={videos[currentIndex]}
+                className="rounded-lg w-full h-[480px] object-cover"
+                controls
+              >
+                <source src={videos[currentIndex]} type="video/mp4" />
+              </video>
             </div>
-        </section>
-    )
-}
 
-export default Testimonials
+          </div>
+        </div>
+      )}
+
+      {/* TEXT TESTIMONIAL */}
+      {!isVideo && TestimonialsData[testimonialIndex] && (
+        <div className="flex justify-center px-2 md:px-2">
+          <div className="bg-[#FBF4EC] rounded-xl shadow-xl p-6 max-w-xl w-full text-center">
+
+            <p className="text-lg md:text-xl italic text-foreground mb-8 mt-8 pb-2 pt-2">
+              "{TestimonialsData[testimonialIndex].testimonial}"
+            </p>
+
+            <p className="text-lg font-semibold text-primary">
+              {TestimonialsData[testimonialIndex].name}
+            </p>
+
+          </div>
+        </div>
+      )}
+
+    </section>
+  );
+};
+
+export default Testimonials;
