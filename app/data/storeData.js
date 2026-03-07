@@ -13,7 +13,82 @@ export const storeProducts = [
     dimensions: "6 in X 8 in",
     imageData: {
       mainImage: {
-        src: "/store/rajasthani-miniature-1/1.png",
+        src: "/store/rajasthani-miniature-1.0/1.png",
+        alt: "Painting 1"
+      },
+      additionalImages: [
+              {
+             
+              },
+            ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
+  {
+    category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 1",
+    slug: "rajasthani-miniature-1",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-1.1/1.jpg",
+        alt: "Painting 1"
+      },
+      additionalImages: [
+              {
+             
+              },
+            ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
+  {
+    category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 1",
+    slug: "rajasthani-miniature-1",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-1.2/1.jpg",
+        alt: "Painting 1"
+      },
+      additionalImages: [
+              {
+             
+              },
+            ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
+  {
+    category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 1",
+    slug: "rajasthani-miniature-1",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-1.3/1.jpg",
         alt: "Painting 1"
       },
       additionalImages: [
@@ -125,6 +200,81 @@ export const storeProducts = [
     inStock: true,
     tags: [ "nature", "vibrant", "intricate"],
   },
+  {
+      category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 5",
+    slug: "rajasthani-miniature-5",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-5.1/1.jpg",
+        alt: "Painting 5"
+      },
+      additionalImages: [
+        {
+
+        },
+      ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
+  {
+      category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 5",
+    slug: "rajasthani-miniature-5",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-5.2/1.jpg",
+        alt: "Painting 5"
+      },
+      additionalImages: [
+        {
+
+        },
+      ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
+  {
+      category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 5",
+    slug: "rajasthani-miniature-5",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-5.3/1.jpg",
+        alt: "Painting 5"
+      },
+      additionalImages: [
+        {
+
+        },
+      ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
     {
     category: "Rajasthani Miniature",
     title: "Rajasthani Miniature 6",
@@ -138,7 +288,32 @@ export const storeProducts = [
     dimensions: "6 in X 8 in",
     imageData: {
       mainImage: {
-        src: "/store/rajasthani-miniature-6/1.jpg",
+        src: "/store/rajasthani-miniature-6/01.jpg",
+        alt: "Painting 6"
+      },
+      additionalImages: [
+        {
+
+        },
+      ]
+    },
+    inStock: true,
+    tags: [ "nature", "vibrant", "intricate"],
+  },
+    {
+    category: "Rajasthani Miniature",
+    title: "Rajasthani Miniature 6",
+    slug: "rajasthani-miniature-6",
+    artist: "Shweta Singh",
+    artistPhoto: "/pfp.jpeg",
+    price: 1200,
+    timeToMake: "1 Week",
+    medium: "Acrylic",
+    base:"Pastel Sheets",
+    dimensions: "6 in X 8 in",
+    imageData: {
+      mainImage: {
+        src: "/store/rajasthani-miniature-6.1/1.jpg",
         alt: "Painting 6"
       },
       additionalImages: [
