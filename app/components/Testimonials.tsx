@@ -56,10 +56,10 @@ const Testimonials = () => {
       {/* VIDEO + IMAGE LAYOUT */}
       {isVideo && (
         <div className="flex justify-center px-4 md:px-8">
-          <div className="flex gap-4 w-full max-w-3xl">
+          <div className="flex flex-col md:flex-row gap-4 w-full max-w-3xl">
 
             {/* LEFT IMAGE */}
-            <div className="relative w-1/3 h-[480px] rounded-xl overflow-hidden shadow-xl">
+            <div className="relative w-full md:w-1/3 h-[260px] md:h-[480px] rounded-xl overflow-hidden shadow-xl">
               <Image
                 src={sideImages[currentIndex]}
                 alt="testimonial visual"
@@ -69,10 +69,10 @@ const Testimonials = () => {
             </div>
 
             {/* RIGHT VIDEO */}
-            <div className="w-2/3 bg-[#FBF4EC] rounded-xl shadow-xl p-2">
+            <div className="w-full md:w-2/3 bg-[#FBF4EC] rounded-xl shadow-xl p-2">
               <video
                 key={videos[currentIndex]}
-                className="rounded-lg w-full h-[480px] object-cover"
+                className="rounded-lg w-full h-[260px] md:h-[480px] object-cover"
                 controls
               >
                 <source src={videos[currentIndex]} type="video/mp4" />
@@ -85,7 +85,7 @@ const Testimonials = () => {
 
       {/* TEXT TESTIMONIAL */}
       {!isVideo && TestimonialsData[testimonialIndex] && (
-        <div className="flex justify-center px-2 md:px-2">
+        <div className="flex justify-center px-4 md:px-2">
           <div className="bg-[#FBF4EC] rounded-xl shadow-xl p-6 max-w-xl w-full text-center">
 
             <p className="text-lg md:text-xl italic text-foreground mb-8 mt-8 pb-2 pt-2">
