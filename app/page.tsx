@@ -22,7 +22,6 @@ const Page = () => {
 
   return (
     <div>
-
       {/* ============Carousel Section============ */}
       <Carousel />
 
