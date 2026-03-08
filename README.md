@@ -61,50 +61,59 @@ npm run build
 
 ---
 
-# 3. Project Structure
-
-Important folders in the project:
-
-## app/components
-
-Contains reusable UI components like:
-
-- Navbar
-- Footer
-- Course cards
-- Product cards
-- Gallery
-- Testimonials
-
-## app/data
-
-Contains all editable content for the website.
-
-Files inside this folder control:
-
 ```
-aboutSection.js → About section
-coursesData.js → Certified courses
-classesData.js → Classes and workshops
-storeData.js → Store products
-heroCarousel.js → Homepage carousel
-eventsWorkshopsSection.js → Events section
-testimonials.js → Testimonials
+raskrtiart/
+├── app/
+│   ├── components/          # Reusable UI components
+│   │   ├── about.tsx
+│   │   ├── ArtGallery.tsx
+│   │   ├── Button.jsx
+│   │   ├── carausal.tsx
+│   │   ├── ClassCard.tsx
+│   │   ├── ClassSection.jsx
+│   │   ├── contactUs.tsx
+│   │   ├── CourseSection.tsx
+│   │   ├── CourseCard.tsx
+│   │   ├── events.tsx
+│   │   ├── ExploreArtworks.tsx
+│   │   ├── footer.tsx
+│   │   ├── FounderSection.tsx
+│   │   ├── navbar.tsx
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductGallery.tsx
+│   │   ├── Testimonials.tsx
+│   │   └── WhatsAppChat.tsx
+│   ├── data/                # ⭐ Content data (edit here to add/change content)
+│   │   ├── aboutSection.js
+│   │   ├── classesData.js   # Classes / workshops
+│   │   ├── coursesData.js   # Certified courses
+│   │   ├── eventsWorkshopsSection.js
+│   │   ├── heroCarousel.js
+│   │   ├── storeData.js     # Store products
+│   │   └── testimonials.js
+│   ├── shop/
+│   │   └── [slug]/
+│   │       └── page.tsx     # Dynamic product detail page (/shop/:slug)
+│   ├── utils/
+│   │   └── whatsappRedirect.js
+│   ├── globals.css
+│   ├── layout.tsx           # Root layout (Navbar, Footer, WhatsApp)
+│   ├── page.tsx             # Home page (all sections)
+│   └── not-found.tsx
+├── public/                  # Static assets (images, fonts)
+│   ├── courses/             # Course thumbnails
+│   ├── classes/             # Class thumbnails
+│   ├── store/               # Product images (per-product folders)
+│   ├── carousel/
+│   ├── events/
+│   ├── gallery/
+│   ├── testimonials/
+│   └── ...
+├── next.config.ts
+├── package.json
+├── tailwind / postcss / tsconfig / eslint configs
+└── DOCUMENTATION.md         # This file
 ```
-
-## public folder
-
-Contains all images used on the website.
-
-Examples:
-
-```
-public/courses → Course thumbnails
-public/classes → Class thumbnails
-public/store → Product images
-```
-
----
 
 # 4. How to Add a New Course
 
